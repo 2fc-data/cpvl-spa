@@ -1,8 +1,8 @@
 import { MdAttachMoney, MdBarChart } from "react-icons/md"
-import { BlockContentWrap } from "../../../styles/global/default.ts"
+import { BlockContentWrap } from "../../styles/global/default.ts"
 import { DashboardWrap } from "./Dashboard.styles.ts"
 
-const Summary = () => {
+export const Dashboard = () => {
   return (
     <DashboardWrap>
       <div className='dash-board-content'>
@@ -31,5 +31,3 @@ const Summary = () => {
     </DashboardWrap>
   )
 }
-
-export default Summary
