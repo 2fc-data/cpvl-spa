@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from './styles/theme/theme';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { GlobalStyles } from './styles/global/globalStyles';
-import BaseLayout from './components/layout/BaseLayout';
+import { BaseLayout } from './components/Layout/BaseLayout.component';
 import Home from './screens/home/HomeScreen';
 import About from './screens/about/AboutScreen';
 
