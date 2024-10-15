@@ -1,7 +1,7 @@
 
 import { DashboardScreenWrap } from "./DashboardScreen.styles.ts"
 
-const DashboardScreen = () => {
+export const DashboardScreen = () => {
   return (
     <DashboardScreenWrap>
       Dashboard
@@ -9,4 +9,3 @@ const DashboardScreen = () => {
   )
 }
 
-export default DashboardScreen

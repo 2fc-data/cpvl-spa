@@ -1,9 +1,9 @@
 import { Outlet } from 'react-router-dom';
 import { BaseLayoutWrap } from './BaseLayout.styles';
-import Sidebar from '../sidebar/Sidebar';
-import NavBar from '../navBar/NavBar';
+import Sidebar from '../Sidebar/Sidebar.component';
+import { NavBar } from '../NavBar/NavBar.component';
 
-const BaseLayout = () => {
+export const BaseLayout = () => {
   return (
     <BaseLayoutWrap>
       <Sidebar isSidebarOpen={false} dispatch={undefined} />
@@ -14,5 +14,3 @@ const BaseLayout = () => {
     </BaseLayoutWrap>
   )
 }
-
-export default BaseLayout

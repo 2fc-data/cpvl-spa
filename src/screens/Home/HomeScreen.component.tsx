@@ -1,11 +1,10 @@
 import { HomeScreenWrap } from "./HomeScreen.styles"
+import { Dashboard } from "../../pages/Dashboard"
 
-const HomeScreen = () => {
+export const HomeScreen = () => {
   return (
     <HomeScreenWrap>
-      Home.
+      <Dashboard />
     </HomeScreenWrap>
   )
 }
-
-export default HomeScreen

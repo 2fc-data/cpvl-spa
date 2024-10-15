@@ -3,9 +3,9 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from './styles/theme/theme';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { GlobalStyles } from './styles/global/globalStyles';
-import BaseLayout from './components/layout/BaseLayout';
-import Home from './screens/home/HomeScreen';
-import About from './screens/about/AboutScreen';
+import { BaseLayout } from './components/Layout/BaseLayout.component';
+import { DashboardScreen } from './screens/Dashboard/DashboardScreen.component';
+
 
 function App() {
 
@@ -16,7 +16,7 @@ function App() {
           <GlobalStyles />
           <Routes>
             <Route path='/*' element={<BaseLayout />}>
-              <Route path='/*' element={<Home />} />
+              <Route path='/dashboard' element={<DashboardScreen />} />
             </Route>
           </Routes>
         </Router>

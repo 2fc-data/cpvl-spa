@@ -1,9 +1,9 @@
 import { MdClose, MdCorporateFare, MdOutlineDashboardCustomize, MdOutlineGroups, MdOutlineHome, MdOutlineLocalAirport, MdOutlineLock, MdOutlineSatelliteAlt } from "react-icons/md";
-import { SidebarWrap } from "./Sidebar.styles";
+import { SidebarWrap } from "./Sidebar.styles.ts";
 import { FaSkyatlas } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { setSidebarClose } from '../../redux/slices/sidebarSlice';
+import { setSidebarClose } from '../../redux/slices/sidebarSlice.ts';
 import { store } from "../../redux/store.ts";
 
 import { useLocalStorage } from 'usehooks-ts';
