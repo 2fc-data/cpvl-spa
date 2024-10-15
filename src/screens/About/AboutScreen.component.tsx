@@ -1,6 +1,6 @@
 import { AboutScreenWrap } from "./AboutScreen.styles"
 
-const AboutScreen = () => {
+export const AboutScreen = () => {
   return (
     <AboutScreenWrap>
       About.
@@ -8,4 +8,3 @@ const AboutScreen = () => {
   )
 }
 
-export default AboutScreen
