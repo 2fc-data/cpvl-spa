@@ -5,15 +5,20 @@ export const NavBarWrap = styled.header`
   margin-bottom: 32px;
 
   .navbar-content {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+
+    ${media.md`
+      justify-content: space-between;
+      padding: 10px 10px;
+    `}
   }
 
   .navbar-head-main {
     display: flex;
     align-items: center;
-    gap: 16px;
   }
 
   .sidebar-open-btn {
@@ -40,6 +45,5 @@ export const NavBarWrap = styled.header`
   .navbar-head-top {
     display: flex;
     align-items: center;
-    border: 2px solid green;
   }
 `;
