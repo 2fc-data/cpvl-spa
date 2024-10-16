@@ -5,15 +5,10 @@ export const NavBarWrap = styled.header`
   margin-bottom: 32px;
 
   .navbar-content {
+    color: ${theme.colors.green2};
     align-items: center;
     display: flex;
-    justify-content: space-around;
-    padding: 15px 0;
-
-    ${media.md`
-      justify-content: space-between;
-      padding: 10px 10px;
-    `}
+    justify-content: space-between;
   }
 
   .navbar-head-main {

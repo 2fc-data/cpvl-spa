@@ -12,7 +12,7 @@ export const Sidebar = () => {
   return (
     <SidebarWrap $isOpen={isOpen}>
       <div className="sidebar-content">
-        <div className="sidebar-head">
+        {/* <div className="sidebar-head">
           <button
             type="button"
             className="sidebar-close-btn"
@@ -20,7 +20,7 @@ export const Sidebar = () => {
           >
             <MdClose />
           </button>
-        </div>
+        </div> */}
 
         <nav className="sidebar-nav scrollbar">
           <ul className="sidenav-list">
