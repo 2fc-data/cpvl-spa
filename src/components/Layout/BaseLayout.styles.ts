@@ -13,18 +13,15 @@ export const BaseLayoutWrap = styled.div`
     padding: 32px 20px;
 
     ${media.xxl`
-      margin-left: 0px;
       padding: 32px 16px;
     `}
 
     ${media.xl`
-      margin-left: 72px;
       padding: 24px 16px;
     `}
 
     ${media.lg`
-      margin-left: 72px;
-      padding: 24px 16px;
+      padding: 12px 8px;
     `}
 
     ${media.md`
