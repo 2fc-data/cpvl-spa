@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme, media } from "../../styles/theme/theme";
+import { theme, media } from "../../styles/Theme/theme";
 
 export const BaseLayoutWrap = styled.div`
   color: ${theme.colors.greenDark};

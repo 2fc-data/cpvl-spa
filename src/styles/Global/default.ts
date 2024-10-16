@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { media, theme } from "../theme/theme";
+import { media, theme } from "../Theme/theme";
 
 export const Container = styled.div`
   max-width: 1320px;
