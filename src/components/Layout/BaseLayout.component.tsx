@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { BaseLayoutWrap } from './BaseLayout.styles';
-import Sidebar from '../Sidebar/Sidebar.component';
+import { Sidebar } from '../Sidebar/Sidebar.component';
 import { NavBar } from '../NavBar/NavBar.component';
 
 export const BaseLayout = () => {

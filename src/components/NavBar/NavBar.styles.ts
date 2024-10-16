@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { media, theme } from "../../styles/theme/theme";
+import { media, theme } from "../../styles/Theme/theme";
 
 export const NavBarWrap = styled.header`
   margin-bottom: 32px;

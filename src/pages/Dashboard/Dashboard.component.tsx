@@ -1,5 +1,5 @@
 import { MdAttachMoney, MdBarChart } from "react-icons/md"
-import { BlockContentWrap } from "../../styles/global/default.ts"
+import { BlockContentWrap } from "../../styles/Global/default.ts"
 import { DashboardWrap } from "./Dashboard.styles.ts"
 
 export const Dashboard = () => {

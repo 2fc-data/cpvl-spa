@@ -1,85 +1,71 @@
-import { media, theme } from "../../styles/theme/theme";
+import { media, theme } from "../../styles/Theme/theme";
 import styled from "styled-components";
 
-export const SidebarWrap = styled.div`
+interface SidebarWrapProps {
+  $isOpen: boolean; // Use a dollar sign ($) prefix to indicate it is used only in styles
+}
+
+export const SidebarWrap = styled.div<SidebarWrapProps>`
   background: ${theme.colors.white};
   box-shadow: rgba(0, 0, 0, 0.3) 0 20px 30px;
   color: ${theme.colors.greenDark};
   height: 100%;
   left: 0;
+  padding: 9px 0;
   position: fixed;
   top: 0;
-  width: 260px;
+  width: 300px;
+  transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(-100%)')};
+  transition: transform 0.3s ease-in-out;
   z-index: 1000;
   
+
+  /* Apply transform logic based on $isOpen prop */
+  transform: ${({ $isOpen }) => ($isOpen ? 'translateX(0)' : 'translateX(-100%)')};
+
   ${media.xxl`
-    width: 240px;
+    width: 300px;
   `}
 
   ${media.xl`
     width: 72px;
   `}
 
+  ${media.lg`
+    width: 72px;
+  `}
+
   ${media.md`
-    transform: translateX(-100%);
+    transform: ${({ $isOpen }) => ($isOpen ? 'translateX(0)' : 'translateX(-100%)')};
     width: 260px;
   `}
 
-  .sidebar-content{
+  .sidebar-content {
     display: flex;
     flex-direction: column;
     height: 100%;
   }
 
-  .sidebar-head{
+  .sidebar-head {
     align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    column-gap: 12px;
+    border-bottom: 1px solid ${theme.colors.green2};
     display: flex;
     min-height: 72px;
     padding: 20px;
- 
+
     ${media.xl`
       justify-content: center;
-      padding: 16px 12px;
+      padding: 12px;
     `}
 
     ${media.md`
       justify-content: flex-start; 
     `}
 
-    .site-icon{
-      align-items: center;
-      border-radius: 4px;
-      display: flex;
-      height: 32px;
-      justify-content: center;
-      width: 32px;
-
-      svg{
-        height: 28px;
-        width: 28px;
-      }
-    }
-
-    .site-name{
-      font-size: 24px;
-      font-weight: 700;
-      text-transform: uppercase;
-      
-      ${media.xl`
-        display: none;
-      `}
-
-      ${media.md`
-        display: block; 
-      `}
-    }
-
-    .sidebar-close-btn{
+    .sidebar-close-btn {
       color: ${theme.colors.greenDark};
-      display: none;
       margin-left: auto;
+      font-size: 24px;
 
       ${media.md`
         display: block; 
@@ -87,10 +73,10 @@ export const SidebarWrap = styled.div`
     }
   }
 
-  .sidebar-nav{
+  .sidebar-nav {
     flex: 1;
     min-height: calc(100% - 90px);
-    overflow-y: scroll;
+    overflow-y: auto;
     padding: 32px 20px;
 
     ${media.xl`
@@ -98,7 +84,7 @@ export const SidebarWrap = styled.div`
     `}
   }
 
-  .sidenav-list{
+  .sidenav-list {
     display: grid;
     row-gap: 20px;
 
@@ -107,7 +93,7 @@ export const SidebarWrap = styled.div`
     `}
   }
 
-  .sidenav-item{
+  .sidenav-item {
     align-items: center;
     display: flex;
     min-height: 36px;
@@ -121,18 +107,18 @@ export const SidebarWrap = styled.div`
     `}
   }
 
-  .sidenav-link{
+  .sidenav-link {
     align-items: center;
     display: flex;
     column-gap: 12px;
     font-size: 16px;
 
-    &:hover{
+    &:hover {
       opacity: 0.8;
       transition: ${theme.transitions.easeInOut};
     }
 
-    .link-icon{
+    .link-icon {
       align-items: center;
       display: flex;
       justify-content: center;
@@ -140,9 +126,9 @@ export const SidebarWrap = styled.div`
       width: 28px;
     }
 
-    .link-text{
+    .link-text {
       font-weight: 500;
-      
+
       ${media.xl`
         display: none;
       `}
@@ -153,32 +139,27 @@ export const SidebarWrap = styled.div`
     }
   }
 
-  &.sidebar-active{
-    position: fixed;
+  &.sidebar-active {
     width: 260px;
 
-    .sidebar-head{
+    .sidebar-head {
       justify-content: flex-start;
-      padding: 16px; 
+      padding: 16px;
 
-      .site-name{
+      .site-name {
         display: block;
       }
 
-      .side-bar-close-btn{
+      .sidebar-close-btn {
         display: inline-flex;
       }
     }
 
-    .sadebar-nav{
-      .sidenav-item{
-        justify-content: flex-start;
+    .sidebar-nav .sidenav-item {
+      justify-content: flex-start;
 
-        .sidenav-link{
-          .link-text{
-            display: block;
-          }
-        }
+      .sidenav-link .link-text {
+        display: block;
       }
     }
 
@@ -186,5 +167,4 @@ export const SidebarWrap = styled.div`
       transform: translateX(0);
     `}
   }
-
 `;

@@ -1,11 +1,11 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'normalize.css';
 import { ThemeProvider } from 'styled-components';
-import { theme } from './styles/theme/theme';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { GlobalStyles } from './styles/global/globalStyles';
-import { BaseLayout } from './components/Layout/BaseLayout.component';
-import { DashboardScreen } from './screens/Dashboard/DashboardScreen.component';
+import { theme } from './styles/Theme/theme';
 
+import { GlobalStyles } from './styles/Global/globalStyles';
+import { BaseLayout } from './components/Layout/';
+import { DashboardScreen } from './screens/Dashboard';
 
 function App() {
 
@@ -16,7 +16,7 @@ function App() {
           <GlobalStyles />
           <Routes>
             <Route path='/*' element={<BaseLayout />}>
-              <Route path='/dashboard' element={<DashboardScreen />} />
+              <Route path='/*' element={<DashboardScreen />} />
             </Route>
           </Routes>
         </Router>
