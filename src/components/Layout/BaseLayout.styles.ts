@@ -9,15 +9,20 @@ export const BaseLayoutWrap = styled.div`
 
   .main-content-wrapper {
     flex: 1;
-    margin-left: 260px;
+    margin-left: 0px;
     padding: 32px 20px;
 
     ${media.xxl`
-      margin-left: 260px;
+      margin-left: 0px;
       padding: 32px 16px;
     `}
 
     ${media.xl`
+      margin-left: 72px;
+      padding: 24px 16px;
+    `}
+
+    ${media.lg`
       margin-left: 72px;
       padding: 24px 16px;
     `}

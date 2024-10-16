@@ -7,10 +7,10 @@ import { RootState, AppDispatch } from "../../redux/Store";
 
 export const Sidebar = () => {
   const dispatch: AppDispatch = useDispatch();
-  const isSidebarOpen = useSelector((state: RootState) => state.sidebar.isSidebarOpen);
+  const isOpen = useSelector((state: RootState) => state.sidebar.isOpen);
 
   return (
-    <SidebarWrap $isOpen={isSidebarOpen}>
+    <SidebarWrap $isOpen={isOpen}>
       <div className="sidebar-content">
         <div className="sidebar-head">
           <button
