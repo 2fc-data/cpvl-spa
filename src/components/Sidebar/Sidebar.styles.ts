@@ -6,9 +6,8 @@ interface SidebarWrapProps {
 }
 
 export const SidebarWrap = styled.div<SidebarWrapProps>`
-  /* background: ${theme.colors.white}; */
   background: transparent;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 0px 30px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0px 30px;
   color: ${theme.colors.greenDark};
   height: 100%;
   left: 0;
@@ -21,18 +20,22 @@ export const SidebarWrap = styled.div<SidebarWrapProps>`
   z-index: 0;
 
   ${media.xxl`
+    /* background: ${theme.colors.yellow}; */
     width: 300px;
   `}
 
-  ${media.xxl`
+  ${media.xl`
+    /* background: ${theme.colors.warning}; */
     width: 280px;
   `}
 
-  ${media.xxl`
+  ${media.lg`
+    /* background: ${theme.colors.green}; */
     width: 260px;
   `}
 
   ${media.md`
+    /* background: ${theme.colors.blueSky}; */
     width: 240px;
   `}
 
@@ -44,7 +47,7 @@ export const SidebarWrap = styled.div<SidebarWrapProps>`
 
   .sidebar-nav {
     flex: 1;
-    margin-top: 54px;
+    margin-top: 25%;
     min-height: calc(100% - 90px);
     overflow-y: auto;
     padding: 32px 20px;
@@ -62,21 +65,13 @@ export const SidebarWrap = styled.div<SidebarWrapProps>`
       `}
     }
 
-    .sidebar-item{
+    .sidenav-item{
       align-items: center;
       display: flex;
       min-height: 36px;
-      
-      ${media.xl`
-        justify-content: center;
-      `}
-
-      ${media.md`
-        justify-content: flex-start;
-      `}
     }
 
-    .sidebar-link{
+    .sidenav-link{
       align-items: center;
       column-gap: 12px;
       display: flex;
@@ -90,21 +85,15 @@ export const SidebarWrap = styled.div<SidebarWrapProps>`
       .link-icon{
         align-items: center;
         display: flex;        
-        height: 28px;
+        height: 45px;
         justify-content: center;
-        width: 28px;
+        width: 45px;
       }
 
       .link-text{
         font-weight: 500;
 
-        ${media.xl`
-          display: none;
-        `}
-        
-        ${media.md`
-          display: block;
-        `}
+
       }
 
     }

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { media, theme } from "../../styles/Theme/theme";
 
 export const NavBarWrap = styled.header`
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 
   .navbar-content {
     color: ${theme.colors.green2};
@@ -12,8 +12,8 @@ export const NavBarWrap = styled.header`
   }
 
   .navbar-head-main {
-    display: flex;
     align-items: center;
+    display: flex;
   }
 
   .sidebar-open-btn {

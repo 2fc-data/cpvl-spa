@@ -1,4 +1,4 @@
-import { MdClose, MdOutlineExitToApp, MdOutlineHome, MdOutlineLock, MdOutlineSatelliteAlt } from "react-icons/md";
+import { MdOutlineExitToApp, MdOutlineHome, MdOutlineLock, MdOutlineSatelliteAlt } from "react-icons/md";
 import { SidebarWrap } from "./Sidebar.styles";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -12,16 +12,6 @@ export const Sidebar = () => {
   return (
     <SidebarWrap $isOpen={isOpen}>
       <div className="sidebar-content">
-        {/* <div className="sidebar-head">
-          <button
-            type="button"
-            className="sidebar-close-btn"
-            onClick={() => dispatch(setSidebarState(false))}
-          >
-            <MdClose />
-          </button>
-        </div> */}
-
         <nav className="sidebar-nav scrollbar">
           <ul className="sidenav-list">
             {["inicio", "about", "logout", "login"].map((item, index) => (
