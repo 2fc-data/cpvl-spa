@@ -1,4 +1,4 @@
-import { BlockContentWrap } from "../../../styles/global/default.ts"
+import { BlockContentWrap } from "../../styles/Global/default.ts"
 import { AboutWrap } from "./About.styles.ts"
 
 export const About = () => {

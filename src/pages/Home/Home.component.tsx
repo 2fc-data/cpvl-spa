@@ -1,7 +1,7 @@
-import { BlockContentWrap } from "../../../styles/global/default.ts"
+import { BlockContentWrap } from "../../styles/Global/default.ts"
 import { HomeWrap } from "./Home.styles.ts"
 
-const Home = () => {
+export const Home = () => {
   return (
     <HomeWrap>
       <div className='home-content'>
@@ -15,4 +15,3 @@ const Home = () => {
   )
 }
 
-export default Home
