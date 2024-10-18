@@ -26,7 +26,8 @@ export const BlockTitle = styled.div`
 `;
 
 export const BlockWrapStyles = css`
-  background: ${theme.colors.grayLight};
+  /* background: ${theme.colors.grayLight}; */
+  background-color: rgba(255, 255, 255, .2);
   border-radius: 10px;
   padding: 24px;
 

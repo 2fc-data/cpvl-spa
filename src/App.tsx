@@ -7,8 +7,8 @@ import { GlobalStyles } from './styles/Global/globalStyles';
 import { theme } from './styles/Theme/theme';
 import { ThemeProvider } from 'styled-components';
 
-import { About } from './pages/About/About.component';
-import { Home } from './pages/Home/Home.component';
+import { About } from './pages/About/';
+import { Home } from './pages/Home/';
 
 function App() {
 
@@ -21,7 +21,8 @@ function App() {
             <Route path='/*' element={<BaseLayout />}>
               <Route path="about" element={<About />} />
               <Route path="home" element={<Home />} />
-              <Route path='/*' element={<DashboardScreen />} />
+              <Route path='/*' element={<DashboardScreen />}>
+              </Route>
             </Route>
           </Routes>
         </Router>
