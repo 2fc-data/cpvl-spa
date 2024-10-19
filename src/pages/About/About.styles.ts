@@ -1,7 +1,7 @@
 import { media, theme } from "../../styles/Theme/theme"; 
 import styled from "styled-components";
 import image_about from "../../assets/Images/1alvorada.jpg";
-import image_paulo_sergio from "../../assets/Images/baianoVoandoSul_vet.jpg"
+import image_paulo_sergio from "../../assets/Images/baianoVoandoSul_pb.jpg"
 
 export const AboutWrap = styled.div`
 
@@ -49,7 +49,7 @@ export const AboutWrap = styled.div`
   }
 
   .about-block {
-    align-items: center;
+    align-items: start;
     display: flex;
     justify-content: space-around;
     margin: 20px 0px;

@@ -32,23 +32,20 @@ export const About = () => {
 
         <div className="about-block">
           <BlockContentWrap className="about-text">
-              Em 1992 Luís Pasquale começou a voar de Parapente, em 1993 formou
-              a primeira turma de pilotos de Parapente e em 1995 já com 20
-              alunos, fundou o Clube Poçoscaldense de Vôo Livre - CPVL.
+            Em 1992 Luís Pasquale começou a voar de Parapente, em 1993 formou
+            a primeira turma de pilotos de Parapente e em 1995 já com 20
+            alunos, fundou o Clube Poçoscaldense de Vôo Livre - CPVL.
 
-              Desde então tivemos vários Campeões Nacinais: Rafael Carvalho
-              2002, Renato Marcel Lopes 2008, Serginho Henrique Sampaio 2010,
-              Cristiano Ricci da Silva 2016, Marcella Uchoa e Gilmar de Jesus
-              Couto em 2022.
+            Desde então tivemos vários Campeões Nacinais: Rafael Carvalho
+            2002, Renato Marcel Lopes 2008, Serginho Henrique Sampaio 2010,
+            Cristiano Ricci da Silva 2016, Marcella Uchoa e Gilmar de Jesus
+            Couto em 2022.
           </BlockContentWrap>
           
           <BlockContentWrap className="about-text">
-          No início de 2023, o nosso espaço de decolagens, antes um lugar
-              público, se tornou uma concessão da empresa CITUR, a qual trouxe
-              inovações na infra-estrutura entre outras melhorias. Sempre fomos
-              abençoados em ter um lugar tão especial e com uma vista
-              privilegiada e agora com as melhorias realizadas pela CITUR,
-              teremos uma das mais bonitas e melhor estruturada rampa do país.
+            No início de 2023, o nosso espaço de decolagens, antes um lugar
+            público, se tornou uma concessão da empresa CITUR, a qual trouxe
+            inovações na infra-estrutura entre outras melhorias.
           </BlockContentWrap>
         </div>
       </div>

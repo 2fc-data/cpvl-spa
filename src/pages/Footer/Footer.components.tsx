@@ -17,7 +17,6 @@ export const Footer = () => {
         <p>
           <Link to="/regiment">Regimento Interno</Link>
         </p>
-
         <p>
           <Link to="/about">Sobre</Link>
         </p> 

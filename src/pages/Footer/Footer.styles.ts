@@ -3,7 +3,8 @@ import { media, theme } from "../../styles/Theme/theme";
 
 export const FooterWrap = styled.div`
 
-  background-color: ${theme.colors.greenComplem};}
+  background-color: ${theme.colors.greenComplem};
+  margin-top: 30px;
 
   .footer-content {
     align-items: start;
