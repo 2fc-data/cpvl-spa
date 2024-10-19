@@ -8,7 +8,7 @@ interface SidebarWrapProps {
 export const SidebarWrap = styled.div<SidebarWrapProps>`
   background: transparent;
   box-shadow: rgba(0, 0, 0, 0.1) 0 0px 30px;
-  color: ${theme.colors.greenDark};
+  color: ${theme.colors.greenComplem};
   height: 100%;
   left: 0;
   padding: 9px 0;
@@ -46,6 +46,7 @@ export const SidebarWrap = styled.div<SidebarWrapProps>`
   }
 
   .sidebar-nav {
+    background-color: ${theme.colors.white};
     flex: 1;
     margin-top: 25%;
     min-height: calc(100% - 90px);
@@ -75,7 +76,8 @@ export const SidebarWrap = styled.div<SidebarWrapProps>`
       align-items: center;
       column-gap: 12px;
       display: flex;
-      font-size: 16px;      
+      font-size: 16px; 
+      width: 100%;     
 
       &:hover{
         opacity: 0.8;

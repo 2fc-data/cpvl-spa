@@ -5,7 +5,7 @@ export const NavBarWrap = styled.header`
   margin-bottom: 30px;
 
   .navbar-content {
-    color: ${theme.colors.green2};
+    color: ${theme.colors.greenComplem};
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -17,9 +17,9 @@ export const NavBarWrap = styled.header`
   }
 
   .sidebar-open-btn {
-    color: ${theme.colors.greenDark};
+    color: ${theme.colors.greenComplem};
     cursor: pointer;
-    display: inline-flex; /* Ensure it's visible */
+    display: inline-flex; 
     align-items: center;
     justify-content: center;
     transition: ${theme.transitions.easeInOut};
@@ -29,11 +29,11 @@ export const NavBarWrap = styled.header`
     }
 
     ${media.xl`
-      display: inline-flex; /* Force visible on larger screens */
+      display: inline-flex; 
     `}
 
     ${media.md`
-      display: inline-flex; /* Visible on medium screens */
+      display: inline-flex; 
     `}
   }
 

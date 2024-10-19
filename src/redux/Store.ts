@@ -1,12 +1,12 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import sidebarReducer from './Slices/SidebarSlice';
+import sidebarSlice from './Slices/SidebarSlice';
 
-export const Store = configureStore({
+export const store = configureStore({
   reducer: combineReducers({
-    sidebar: sidebarReducer,
+    sidebar: sidebarSlice,
   }),
 });
 
-export type RootState = ReturnType<typeof Store.getState>;
-export type AppDispatch = typeof Store.dispatch;
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
 

@@ -14,7 +14,7 @@ export const Sidebar = () => {
       <div className="sidebar-content">
         <nav className="sidebar-nav scrollbar">
           <ul className="sidenav-list">
-            {["inicio", "about", "logout", "login"].map((item, index) => (
+            {["home", "about", "logout", "login"].map((item, index) => (
               <li key={index} className="sidenav-item">
                 <Link
                   className="sidenav-link"
