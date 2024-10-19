@@ -7,7 +7,7 @@ import IconCPVL from "../../assets/Icons/icon_cpvl.svg";
 
 export const NavBar = () => {
   const dispatch: AppDispatch = useDispatch();
-  const isOpen = useSelector((state: RootState) => state.sidebar.isOpen);
+  const isSidebarOpen = useSelector((state: RootState) => state.sidebar.isSidebarOpen);
 
   return (
     <NavBarWrap>
@@ -18,7 +18,7 @@ export const NavBar = () => {
             className="sidebar-open-btn"
             onClick={() => dispatch(toggleSidebar())}
           >
-            {isOpen ? <MdClose size={33} /> : <MdOutlineMenu size={33} />}
+            {isSidebarOpen ? <MdClose size={33} /> : <MdOutlineMenu size={33} />}
           </button>
         </div>
 

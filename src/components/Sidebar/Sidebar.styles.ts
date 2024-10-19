@@ -2,7 +2,7 @@ import { media, theme } from "../../styles/Theme/theme";
 import styled from "styled-components";
 
 interface SidebarWrapProps {
-  $isOpen: boolean; // Use $ prefix for styled-component props
+  $isSidebarOpen: boolean; // Use $ prefix for styled-component props
 }
 
 export const SidebarWrap = styled.div<SidebarWrapProps>`
@@ -16,7 +16,7 @@ export const SidebarWrap = styled.div<SidebarWrapProps>`
   top: 0;
   width: 18%;
   transition: transform 0.4s ease-in-out;  
-  transform: ${({ $isOpen }) => ($isOpen ? 'translateY(0)' : 'translateY(-100%)')};
+  transform: ${({ $isSidebarOpen }) => ($isSidebarOpen ? 'translateY(0)' : 'translateY(-100%)')};
   z-index: 0;
 
   ${media.xxl`

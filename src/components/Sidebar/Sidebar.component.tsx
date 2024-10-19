@@ -7,10 +7,10 @@ import { RootState, AppDispatch } from "../../redux/Store";
 
 export const Sidebar = () => {
   const dispatch: AppDispatch = useDispatch();
-  const isOpen = useSelector((state: RootState) => state.sidebar.isOpen);
+  const isSidebarOpen = useSelector((state: RootState) => state.sidebar.isSidebarOpen);
 
   return (
-    <SidebarWrap $isOpen={isOpen}>
+    <SidebarWrap $isSidebarOpen={isSidebarOpen}>
       <div className="sidebar-content">
         <nav className="sidebar-nav scrollbar">
           <ul className="sidenav-list">
