@@ -3,8 +3,7 @@ import { AboutWrap } from "./About.styles.ts"
 
 export const About = () => {
   return (
-    <AboutWrap>
-      <div className='about-content'>
+    <AboutWrap className='about-content'>
         <BlockContentWrap className="about-header">
           <div className="about-title">Nossa história</div>
         </BlockContentWrap>
@@ -50,7 +49,6 @@ export const About = () => {
             inovações e melhoriasna infra-estrutura da rampa norte.
           </BlockContentWrap>
         </div>
-      </div>
     </AboutWrap>
   )
 }

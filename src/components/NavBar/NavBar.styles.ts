@@ -3,7 +3,9 @@ import { media, theme } from "../../styles/Theme/theme";
 
 export const NavBarWrap = styled.header`
   margin-bottom: 30px;
-
+  height: 60px;
+  padding: 10px 60px;
+  
   .navbar-content {
     color: ${theme.colors.greenComplem};
     align-items: center;
@@ -30,10 +32,12 @@ export const NavBarWrap = styled.header`
 
     ${media.xl`
       display: inline-flex; 
+      padding: 10px;
     `}
 
     ${media.md`
       display: inline-flex; 
+      padding: 10px;
     `}
   }
 
