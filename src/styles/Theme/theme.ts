@@ -5,10 +5,13 @@ interface Theme {
     spaceCadet1: string;
     spaceCadet2: string;
     oxfordBlue: string;
+    blue: string;
+    blueComplem: string;
     blueSky: string;
     blueSky1: string;
     blueSky2: string;
     green: string;
+    greenComplem: string;
     green1: string;
     green2: string;
     greenDark: string;
@@ -60,10 +63,13 @@ export const theme: Theme = {
     spaceCadet1: "#111C44",
     spaceCadet2: "#1B254B",
     oxfordBlue: "#0B1437",
+    blue: "#2e3092",
+    blueComplem: "#5289F7",
     blueSky: "#2D72B9", 
     blueSky1: "#4682B4",
     blueSky2: "#87CEEB",
-    green: "#6a9b86",
+    green: "#00a650",
+    greenComplem: "#3E6B64",
     green1: "#174033",
     green2: "#82A650",
     greenDark: "#002730",
