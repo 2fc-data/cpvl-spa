@@ -10,6 +10,7 @@ export const HomeWrap = styled.div`
     background-size: cover;
     background-position: center;
     display: flex;
+    flex-direction: column;
     height: 88vh;
     justify-content: center;
     width: auto;
@@ -28,5 +29,14 @@ export const HomeWrap = styled.div`
     text-transform: uppercase;
   }
 
+  .home-subtitle{
+    align-items: center;
+    border-bottom: 2px solid ${theme.colors.white};
+    color: ${theme.colors.white};      
+    font-size: 14px;
+    font-weight: 500;
+    justify-content: center;
+    margin-top: 1rem;
+  }
 
 `
