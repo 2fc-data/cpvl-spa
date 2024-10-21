@@ -8,7 +8,12 @@ import { theme } from './styles/Theme/theme';
 import { ThemeProvider } from 'styled-components';
 
 import { About } from './pages/About/';
+import { Airspace } from './pages/AirSpace';
+import { Direction } from './pages/Direction';
 import { Home } from './pages/Home/';
+import { Regiment } from './pages/Regiment';
+import { Statute } from './pages/Statute';
+
 
 function App() {
 
@@ -19,8 +24,12 @@ function App() {
           <GlobalStyles />
           <Routes>
             <Route path='/*' element={<BaseLayout />}>
+              <Route path="airspace" element={<Airspace />} />
               <Route path="about" element={<About />} />
+              <Route path="direction" element={<Direction />} />
               <Route path="home" element={<Home />} />
+              <Route path="regiment" element={<Regiment/>} />
+              <Route path="statute" element={<Statute />} />
               <Route path='/*' element={<DashboardScreen />}>
               </Route>
             </Route>

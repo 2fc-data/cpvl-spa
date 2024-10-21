@@ -7,6 +7,9 @@ export const Home = () => {
         <div className="home-title">
           Clube Poçoscaldense de Vôo Livre
         </div>
+        <div className="home-subtitle">
+          desde 1995
+        </div>
       </div>
     </HomeWrap>
   )

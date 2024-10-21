@@ -23,6 +23,19 @@ export const AboutWrap = styled.div`
     height: 30vh;
   }
 
+  .about-block {
+    align-items: start;
+    font-family: roboto, sans-serif;    
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    margin: 50px 0px;
+    text-align: justify;
+
+    ${media.md`
+      display: block;
+    `}
+  }
   .about-title{
     align-items: center;
     border: 2px solid ${theme.colors.white};
@@ -45,19 +58,10 @@ export const AboutWrap = styled.div`
     display: flex;
     height: 30vh;
     justify-content: center;
-    width: 100%;
-  }
-
-  .about-block {
-    align-items: start;
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0px;
-    min-width: 500px;
-    text-align: justify;
+    width: 30vw;
 
     ${media.md`
-      display: block;
+      width: 100%;
     `}
   }
 
@@ -69,7 +73,6 @@ export const AboutWrap = styled.div`
     max-width: 600px;
     line-height: 2;
     padding: 12px 20px;
-    max-width: 50%;
 
     ${media.md`
       max-width: 100%;

@@ -7,17 +7,16 @@ interface SidebarWrapProps {
 
 export const SidebarWrap = styled.div<SidebarWrapProps>`
   background: transparent;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 0px 30px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0px 10px;
   color: ${theme.colors.greenComplem};
   height: 100%;
   left: 0;
   padding: 9px 0;
   position: fixed;
-  top: 0;
+  top: 0px;
   width: 18%;
   transition: transform 0.4s ease-in-out;  
   transform: ${({ $isSidebarOpen }) => ($isSidebarOpen ? 'translateY(0)' : 'translateY(-100%)')};
-  z-index: 0;
 
   ${media.xxl`
     /* background: ${theme.colors.yellow}; */
