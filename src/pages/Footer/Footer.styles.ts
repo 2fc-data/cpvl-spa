@@ -28,7 +28,7 @@ export const FooterWrap = styled.div`
   }
 
   .footer-title {
-    border-bottom: 2px solid ${theme.colors.white};
+    border-bottom: 1px solid ${theme.colors.white};
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
