@@ -26,7 +26,7 @@ export const Regiment = () => {
 
       <BlockContentWrap className="regiment-text">
         <h3>Regimento Interno</h3>
-        <div>
+        <div className="paragraph">
           Na Assemblpeia Geral Extraordinária (AGE) de 21 de setembro de
           2023, foram debatido novos tópicos importantes para atualização do
           novo Regimento Interno (RI) do Clube Poçoscaldense de Vôo Livre -

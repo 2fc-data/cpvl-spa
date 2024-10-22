@@ -4,8 +4,16 @@ import { media, theme } from "../../styles/Theme/theme";
 export const NavBarWrap = styled.header`
   margin-bottom: 30px;
   height: 60px;
-  padding: 10px 60px;
+  padding: 0px 60px;
   
+  ${media.xl` 
+    padding: 0px 30px;
+  `}
+
+  ${media.md`
+    padding: 0px 20px;
+  `}
+
   .navbar-content {
     color: ${theme.colors.greenComplem};
     align-items: center;

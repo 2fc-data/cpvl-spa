@@ -1,4 +1,4 @@
-import { media, theme } from "../../styles/Theme/theme"; 
+import { media, theme } from "../../styles/Theme/theme";
 import styled from "styled-components";
 import image_regiment from "../../assets/Images/2rampa.jpg";
 
@@ -85,6 +85,18 @@ export const RegimentWrap = styled.div`
     ${media.md`
       max-width: 100%;
       padding: 20px 0px;
+    `}
+  }
+
+  .paragraph {
+    padding: 10px 60px;
+
+    ${media.lg`
+      padding: 10px 60px;
+    `}
+
+    ${media.md`
+      padding: 10px 60px;
     `}
   }
 `

@@ -1,4 +1,4 @@
-import { media, theme } from "../../styles/Theme/theme"; 
+import { media, theme } from "../../styles/Theme/theme";
 import styled from "styled-components";
 import image_airspace from "../../assets/Images/3condicao.jpg";
 
@@ -74,6 +74,18 @@ export const AirspaceWrap = styled.div`
     padding: 10px 0px;
     text-align: justify;
     width: auto;
+
+    .paragraph {
+      padding: 10px 60px;
+
+      ${media.lg`
+        padding: 10px 60px;
+      `}
+
+      ${media.md`
+        padding: 10px 60px;
+      `}
+    }
 
     ${media.lg`
       max-width: 100%;

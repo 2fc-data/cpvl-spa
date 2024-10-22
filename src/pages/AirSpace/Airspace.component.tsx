@@ -22,26 +22,28 @@ export const Airspace = () => {
         <div className="airspace-title">Espaço aéreo</div>
       </BlockContentWrap>
 
-        <BlockContentWrap className="airspace-text">
-          <h3>Espaço Aéreo</h3>
-          <div>
-            Desde 1986, o Código Brasileiro de Aeronáutica estabelece que o
-            aerodesporto deverá ser praticado em áreas determinadas pela
-            autoridade aeronáutica. É por isso que a prática só é regular
-            quando realizada dentro do Espaço Aéreo Condicionado (EAC), em
-            áreas geralmente estabelecidas por SBR´s ou NOTAM destinadas ao
-            aerodesporto e disponíveis no site do Departamento de Controle de
-            Espaço Aéreo (DECEA)
-          </div>
+      <BlockContentWrap className="airspace-text">
+        <h3>Espaço Aéreo</h3>
+        <p className="paragraph">
+          Desde 1986, o Código Brasileiro de Aeronáutica estabelece que o
+          aerodesporto deverá ser praticado em áreas determinadas pela
+          autoridade aeronáutica. É por isso que a prática só é regular
+          quando realizada dentro do Espaço Aéreo Condicionado (EAC), em
+          áreas geralmente estabelecidas por SBR´s ou NOTAM destinadas ao
+          aerodesporto e disponíveis no site do Departamento de Controle de
+          Espaço Aéreo (DECEA)
 
           <BlockContentWrap className="airspace-link">
             <Link to="https://www.decea.mil.br/?i=unidades&p=cindacta-i">DECEA Cindacta I</Link>
           </BlockContentWrap>
-        </BlockContentWrap>
+        </p>
 
-        <BlockContentWrap className="airspace-text">
-          {PDFViewer()}
-        </BlockContentWrap>
+
+      </BlockContentWrap>
+
+      <BlockContentWrap className="airspace-text">
+        {PDFViewer()}
+      </BlockContentWrap>
 
     </AirspaceWrap>
   )

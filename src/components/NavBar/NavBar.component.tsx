@@ -18,7 +18,7 @@ export const NavBar = () => {
             className="sidebar-open-btn"
             onClick={() => dispatch(toggleSidebar())}
           >
-            {isSidebarOpen ? <MdClose size={33} /> : <MdOutlineMenu size={33} />}
+            {isSidebarOpen ? <MdClose size={45} /> : <MdOutlineMenu size={45} />}
           </button>
         </div>
 
