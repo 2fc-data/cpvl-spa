@@ -8,12 +8,19 @@ export const FooterWrap = styled.div`
   margin-top: 30px;
   padding: 20px 10px;
 
+  ${media.lg`
+    display: flex-wrap;
+    flex-direction: column;
+    padding: 15px 12px;
+    text-align: center;
+  `}
+
   ${media.md`
-      display: flex-wrap;
-      flex-direction: column;
-      padding: 20px 16px;
-      text-align: center;
-    `}
+    display: flex-wrap;
+    flex-direction: column;
+    padding: 10px 9px;
+    text-align: center;
+  `}
 
   .footer-block {
     align-items: center;

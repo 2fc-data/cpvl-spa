@@ -8,10 +8,16 @@ export const SectionWrap = styled.div`
   padding: 45px 0px;
   
 
+  ${media.lg`
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+  `}
+
   ${media.md`
     flex-direction: column;
     justify-content: center;
-    padding: 30px 0;
+    padding: 15px 0;
   `}
 
   .section-content {

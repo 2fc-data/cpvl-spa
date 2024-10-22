@@ -15,6 +15,16 @@ export const Section = () => {
       </div>
 
       <div className="section-content">
+        <h3 className="section-title">Estatuto</h3>
+        <div className="section-description">
+          O Clube Poçoscaldense de Vôo Livre - CPVL tem um novo Estatuto aprovado na gestão 2024/2025
+        </div>
+        <div className="section-link">
+          <Link to="/statute">Saiba mais</Link>
+        </div>
+      </div>
+      
+      <div className="section-content">
         <h3 className="section-title">Regimento Interno</h3>
         <div className="section-description">
           Na assemblpeia Geral Extraordinária (AGE) de setembro de 2024, foram debatido novos tópicos importantes para atualização do novo Regimento Interno.
@@ -24,15 +34,6 @@ export const Section = () => {
         </div>
       </div>
 
-      <div className="section-content">
-        <h3 className="section-title">Estatuto</h3>
-        <div className="section-description">
-          O Clube Poçoscaldense de Vôo Livre - CPVL tem um novo Estatuto aprovado na gestão 2024/2025
-        </div>
-        <div className="section-link">
-          <Link to="/statute">Saiba mais</Link>
-      </div>
-    </div>
     </SectionWrap >
   )
 }
