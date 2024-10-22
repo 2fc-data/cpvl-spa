@@ -1,7 +1,6 @@
 import { media, theme } from "../../styles/Theme/theme"; 
 import styled from "styled-components";
 import image_airspace from "../../assets/Images/3condicao.jpg";
-import DocAirspace from "../../assets/Images/doc_airspace.jpg"
 
 export const AirspaceWrap = styled.div`
 

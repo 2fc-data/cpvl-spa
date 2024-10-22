@@ -1,7 +1,6 @@
 import { media, theme } from "../../styles/Theme/theme"; 
 import styled from "styled-components";
 import image_statute from "../../assets/Images/5crepusculo.jpg";
-import DocStatute from "../../assets/Docs/Estatuto2016.pdf"
 
 export const StatuteWrap = styled.div`
 
