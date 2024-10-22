@@ -45,7 +45,7 @@ export const SectionWrap = styled.div`
     display: flex;
     background-color: ${theme.colors.greenComplem};
     border: 1px solid ${theme.colors.white};
-    border-radius: 3px;
+    border-radius: 5px;
     color: ${theme.colors.white};
     justify-content: center;
     margin-top: 15px;
