@@ -1,12 +1,13 @@
 import { media, theme } from "../../styles/Theme/theme"; 
 import styled from "styled-components";
-import image_airspace from "../../assets/Images/r_norte1.jpg";
+import image_airspace from "../../assets/Images/3condicao.jpg";
+import DocAirspace from "../../assets/Images/doc_airspace.jpg"
 
 export const AirspaceWrap = styled.div`
 
   .airspace-content {
     align-items: center;
-    display: flex-wrap;
+    display: flex;
     height: 88vh;
     justify-content: center;
     width: auto;
@@ -42,7 +43,7 @@ export const AirspaceWrap = styled.div`
     color: ${theme.colors.white};     
     display: flex; 
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500;
     justify-content: center;
     margin-top: -1em;
     padding: 12px 20px;
@@ -57,7 +58,7 @@ export const AirspaceWrap = styled.div`
     display: flex;
     height: 30vh;
     justify-content: center;
-    width: 30vw;
+    width: 50vw;
 
     ${media.md`
       width: 100%;
@@ -75,6 +76,49 @@ export const AirspaceWrap = styled.div`
 
     ${media.md`
       max-width: 100%;
+      padding: 20px 12px;
     `}
+  }
+
+  .airspace-document{
+    align-items: center;
+    background-size: cover;
+    background-image: url(${DocAirspace});
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 500;
+    height: 45vh;
+    justify-content: center;
+    margin: 20px 0px;
+    overflow: scroll;
+    width: 600px;
+
+    ${media.md`
+      max-width: 100%;
+      margin: 50px 5px;
+    `}
+  }
+
+  .airspace-link {
+    align-items: center;
+    display: flex;
+    background-color: ${theme.colors.greenComplem};
+    border: 1px solid ${theme.colors.white};
+    border-radius: 5px;
+    color: ${theme.colors.white};
+    justify-content: center;
+    margin-top: 15px;
+    padding: 2px 5px ;
+    width: 130px;
+
+    &:hover {
+      background-color: ${theme.colors.white};
+      border: 1px solid ${theme.colors.greenComplem};
+      border-radius: 3px;
+      color: ${theme.colors.greenComplem};
+      cursor: pointer;
+    }
   }
 `

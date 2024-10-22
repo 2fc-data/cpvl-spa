@@ -1,4 +1,5 @@
 import { MdOutlineExitToApp, MdOutlineGroups, MdOutlineHome, MdOutlineLock, MdOutlineSatelliteAlt } from "react-icons/md";
+import { MdOutlineDocumentScanner } from "react-icons/md";
 import { TbBorderSides } from "react-icons/tb";
 import { SidebarWrap } from "./Sidebar.styles";
 import { Link } from "react-router-dom";
@@ -15,7 +16,7 @@ export const Sidebar = () => {
       <div className="sidebar-content">
         <nav className="sidebar-nav scrollbar">
           <ul className="sidenav-list">
-            {["home", "about", "airspace", "direction", "statute", "regiment", "logout", "login"].map((item, index) => (
+            {["home", "about", "airspace", "direction", "regiment", "statute", "login"].map((item, index) => (
               <li key={index} className="sidenav-item">
                 <Link
                   className="sidenav-link"
@@ -27,8 +28,8 @@ export const Sidebar = () => {
                     {index === 1 && <MdOutlineSatelliteAlt size={24} />}
                     {index === 2 && <TbBorderSides size={24} />}
                     {index === 3 && <MdOutlineGroups size={24} />}
-                    {index === 4 && <MdOutlineGroups size={24} />}
-                    {index === 5 && <MdOutlineGroups size={24} />}
+                    {index === 4 && <MdOutlineDocumentScanner size={24} />}
+                    {index === 5 && <MdOutlineDocumentScanner size={24} />}
                     {index === 6 && <MdOutlineExitToApp size={24} />}
                     {index === 7 && <MdOutlineLock size={24} />}
                   </span>

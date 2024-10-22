@@ -5,7 +5,7 @@ import image_paulo_sergio from "../../assets/Images/baianoVoandoSul_pb.jpg"
 
 export const AboutWrap = styled.div`
 
-  .about-content {
+  .about-content {    
     align-items: center;
     display: flex-wrap;
     height: 88vh;

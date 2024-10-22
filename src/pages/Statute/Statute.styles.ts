@@ -1,12 +1,13 @@
 import { media, theme } from "../../styles/Theme/theme"; 
 import styled from "styled-components";
 import image_statute from "../../assets/Images/5crepusculo.jpg";
+import DocStatute from "../../assets/Docs/Estatuto2016.pdf"
 
 export const StatuteWrap = styled.div`
 
   .statute-content {
     align-items: center;
-    display: flex-wrap;
+    display: flex;
     height: 88vh;
     justify-content: center;
     width: auto;
@@ -30,6 +31,8 @@ export const StatuteWrap = styled.div`
     height: auto;
     margin: 50px 0px;
     text-align: justify;
+    padding: 5px;
+    width: 90vw;
 
     ${media.md`
       display: block;
@@ -42,7 +45,7 @@ export const StatuteWrap = styled.div`
     color: ${theme.colors.white};     
     display: flex; 
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500;
     justify-content: center;
     margin-top: -1em;
     padding: 12px 20px;
@@ -57,7 +60,7 @@ export const StatuteWrap = styled.div`
     display: flex;
     height: 30vh;
     justify-content: center;
-    width: 30vw;
+    width: 50vw;
 
     ${media.md`
       width: 100%;
@@ -75,6 +78,28 @@ export const StatuteWrap = styled.div`
 
     ${media.md`
       max-width: 100%;
+      padding: 20px 12px;
+    `}
+  }
+
+  .statute-document{
+    align-items: center;
+    background-size: cover;
+    background-image: url(${DocStatute});
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 500;
+    height: 45vh;
+    justify-content: center;
+    margin: 20px 0px;
+    overflow: scroll;
+    width: 600px;
+
+    ${media.md`
+      max-width: 100%;
+      margin: 50px 5px;
     `}
   }
 `

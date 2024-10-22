@@ -10,7 +10,8 @@ export const About = () => {
 
         <div className="about-block">
           <BlockContentWrap className="about-text">
-            <p>Paulo Sérgio Trevisan, um garoto aventureiro, inteligente e
+            <span>Paulo Sérgio Trevisan,</span>
+            <p>em 1976, um garoto aventureiro, inteligente e
             ousado, natural da nossa querida Poços de Caldas, decidiu realizar
             seu sonho de voar. Sempre com muita admiração ele abservava e
             desfrutava da serra de são Domingos, a qual se localiza do lado

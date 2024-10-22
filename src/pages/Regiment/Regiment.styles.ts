@@ -1,12 +1,13 @@
 import { media, theme } from "../../styles/Theme/theme"; 
 import styled from "styled-components";
-import image_regiment from "../../assets/Images/3condicao.jpg";
+import image_regiment from "../../assets/Images/2rampa.jpg";
+import DocRegiment from "../../assets/Docs/RI.pdf"
 
 export const RegimentWrap = styled.div`
 
   .regiment-content {
     align-items: center;
-    display: flex-wrap;
+    display: flex;
     height: 88vh;
     justify-content: center;
     width: auto;
@@ -30,6 +31,8 @@ export const RegimentWrap = styled.div`
     height: auto;
     margin: 50px 0px;
     text-align: justify;
+    padding: 5px;
+    width: 90vw;
 
     ${media.md`
       display: block;
@@ -42,7 +45,7 @@ export const RegimentWrap = styled.div`
     color: ${theme.colors.white};     
     display: flex; 
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500;
     justify-content: center;
     margin-top: -1em;
     padding: 12px 20px;
@@ -57,7 +60,7 @@ export const RegimentWrap = styled.div`
     display: flex;
     height: 30vh;
     justify-content: center;
-    width: 30vw;
+    width: 50vw;
 
     ${media.md`
       width: 100%;
@@ -75,6 +78,28 @@ export const RegimentWrap = styled.div`
 
     ${media.md`
       max-width: 100%;
+      padding: 20px 12px;
+    `}
+  }
+
+  .regiment-document{
+    align-items: center;
+    background-size: cover;
+    background-image: url(${DocRegiment});
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 500;
+    height: 45vh;
+    justify-content: center;
+    margin: 20px 0px;
+    overflow: scroll;
+    width: 600px;
+
+    ${media.md`
+      max-width: 100%;
+      margin: 50px 5px;
     `}
   }
 `
