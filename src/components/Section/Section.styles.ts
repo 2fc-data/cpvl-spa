@@ -6,7 +6,6 @@ export const SectionWrap = styled.div`
   justify-content: space-between;
   margin: 30px 0;
   padding: 45px 0px;
-  
 
   ${media.lg`
     flex-direction: column;
@@ -22,7 +21,8 @@ export const SectionWrap = styled.div`
 
   .section-content {
     margin: 0 15px;
-    padding: 15px;  
+    padding: 15px; 
+    width: 420px; 
   }
 
   .section-title {
@@ -36,6 +36,7 @@ export const SectionWrap = styled.div`
     padding: 15px 0;
     font-size: 14px;
     font-weight: 500;
+    height: 120px;
     line-height: 2;
 
   }

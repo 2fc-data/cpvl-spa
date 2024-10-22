@@ -24,14 +24,14 @@ export const Sidebar = () => {
                   onClick={() => dispatch(setSidebarState(false))}
                 >
                   <span className="link-icon">
-                    {index === 0 && <MdOutlineHome size={24} />}
-                    {index === 1 && <MdOutlineSatelliteAlt size={24} />}
-                    {index === 2 && <TbBorderSides size={24} />}
-                    {index === 3 && <MdOutlineGroups size={24} />}
-                    {index === 4 && <MdOutlineDocumentScanner size={24} />}
-                    {index === 5 && <MdOutlineDocumentScanner size={24} />}
-                    {index === 6 && <MdOutlineExitToApp size={24} />}
-                    {index === 7 && <MdOutlineLock size={24} />}
+                    {index === 0 && <MdOutlineHome size={36} />}
+                    {index === 1 && <MdOutlineSatelliteAlt size={36} />}
+                    {index === 2 && <TbBorderSides size={36} />}
+                    {index === 3 && <MdOutlineGroups size={36} />}
+                    {index === 4 && <MdOutlineDocumentScanner size={36} />}
+                    {index === 5 && <MdOutlineDocumentScanner size={36} />}
+                    {index === 6 && <MdOutlineExitToApp size={36} />}
+                    {index === 7 && <MdOutlineLock size={36} />}
                   </span>
                   <span className="link-text">{item}</span>
                 </Link>
