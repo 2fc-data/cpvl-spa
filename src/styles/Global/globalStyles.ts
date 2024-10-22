@@ -10,13 +10,17 @@ export const GlobalStyles = createGlobalStyle`
     }
     html{
         scroll-behavior: smooth;
+        height: 100%;
     }
     body{
-        font-family: ${theme.typography.fontFamily};
-        font-weight: ${theme.typography.fontWeight};
-        font-size: ${theme.typography.fontSize};
-        line-height: ${theme.typography.lineHeight};
         background: ${theme.colors.white};
+        font-family: ${theme.typography.fontFamily};        
+        font-size: ${theme.typography.fontSize};
+        font-weight: ${theme.typography.fontWeight};
+        line-height: ${theme.typography.lineHeight};
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        height: 100%;
     }
     ul{
         list-style: none;

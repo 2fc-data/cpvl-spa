@@ -70,36 +70,23 @@ export const AirspaceWrap = styled.div`
     font-size: 14px;
     font-weight: 500;
     justify-content: center;
-    max-width: 600px;
     line-height: 2;
-    padding: 12px 20px;
+    margin: 10px 0px;
+    padding: 10px 0px;
+    text-align: justify;
+    width: auto;
+
+    ${media.lg`
+      max-width: 100%;
+      padding: 20px 0px;
+    `}
 
     ${media.md`
       max-width: 100%;
-      padding: 20px 12px;
+      padding: 20px 0px;
     `}
   }
 
-  .airspace-document{
-    align-items: center;
-    background-size: cover;
-    background-image: url(${DocAirspace});
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    font-size: 14px;
-    font-weight: 500;
-    height: 45vh;
-    justify-content: center;
-    margin: 20px 0px;
-    overflow: scroll;
-    width: 600px;
-
-    ${media.md`
-      max-width: 100%;
-      margin: 50px 5px;
-    `}
-  }
 
   .airspace-link {
     align-items: center;

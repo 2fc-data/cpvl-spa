@@ -1,7 +1,6 @@
 import { media, theme } from "../../styles/Theme/theme"; 
 import styled from "styled-components";
 import image_regiment from "../../assets/Images/2rampa.jpg";
-import DocRegiment from "../../assets/Docs/RI.pdf"
 
 export const RegimentWrap = styled.div`
 
@@ -72,34 +71,20 @@ export const RegimentWrap = styled.div`
     font-size: 14px;
     font-weight: 500;
     justify-content: center;
-    max-width: 600px;
     line-height: 2;
-    padding: 12px 20px;
+    margin: 10px 0px;
+    padding: 10px 0px;
+    text-align: justify;
+    width: auto;
 
-    ${media.md`
+    ${media.lg`
       max-width: 100%;
-      padding: 20px 12px;
+      padding: 20px 0px;
     `}
-  }
-
-  .regiment-document{
-    align-items: center;
-    background-size: cover;
-    background-image: url(${DocRegiment});
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    font-size: 14px;
-    font-weight: 500;
-    height: 45vh;
-    justify-content: center;
-    margin: 20px 0px;
-    overflow: scroll;
-    width: 600px;
 
     ${media.md`
       max-width: 100%;
-      margin: 50px 5px;
+      padding: 20px 0px;
     `}
   }
 `

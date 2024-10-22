@@ -1,16 +1,27 @@
 import { AirspaceWrap } from "./Airspace.styles"
 import { BlockContentWrap } from "../../styles/Global/default"
 import { Link } from "react-router-dom"
-
+import pdf from "/src/assets/Docs/EspacoAereo.pdf"
 
 export const Airspace = () => {
+  const PDFViewer = () => {
+
+    return (
+      <div>
+        <iframe
+          src={pdf}
+          style={{ width: "100%", height: "600px" }}
+        />
+      </div>
+    )
+  };
+
   return (
     <AirspaceWrap className='airspace-content'>
       <BlockContentWrap className="airspace-header">
         <div className="airspace-title">Espaço aéreo</div>
       </BlockContentWrap>
 
-      <div className='airspace-block'>
         <BlockContentWrap className="airspace-text">
           <h3>Espaço Aéreo</h3>
           <div>
@@ -23,13 +34,14 @@ export const Airspace = () => {
             Espaço Aéreo (DECEA)
           </div>
 
-          <div className="airspace-link">
+          <BlockContentWrap className="airspace-link">
             <Link to="https://www.decea.mil.br/?i=unidades&p=cindacta-i">DECEA Cindacta I</Link>
-          </div>
+          </BlockContentWrap>
         </BlockContentWrap>
 
-        <BlockContentWrap className="airspace-document" />
-      </div>
+        <BlockContentWrap className="airspace-text">
+          {PDFViewer()}
+        </BlockContentWrap>
 
     </AirspaceWrap>
   )
