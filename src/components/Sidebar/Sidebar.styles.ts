@@ -78,7 +78,11 @@ export const SidebarWrap = styled.div<SidebarWrapProps>`
       font-size: 16px; 
       width: 100%;     
 
-      &:hover{
+      &:hover{        
+        background-color: ${theme.colors.greenComplem};
+        border-radius: 5px;
+        color: ${theme.colors.white};
+        cursor: pointer;
         opacity: 0.8;
         transition: ${theme.transitions.easeInOut};
       }
@@ -93,8 +97,6 @@ export const SidebarWrap = styled.div<SidebarWrapProps>`
 
       .link-text{
         font-weight: 500;
-
-
       }
 
     }
