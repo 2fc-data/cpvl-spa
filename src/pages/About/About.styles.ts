@@ -36,6 +36,7 @@ export const AboutWrap = styled.div`
       display: block;
     `}
   }
+  
   .about-title{
     align-items: center;
     border: 2px solid ${theme.colors.white};
