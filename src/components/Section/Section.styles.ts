@@ -6,7 +6,7 @@ export const SectionWrap = styled.div`
   justify-content: space-between;
   margin: 30px 0;
   padding: 45px 0px;
-  border-top: 3px solid ${theme.colors.greenComplem};
+  
 
   ${media.md`
     flex-direction: column;

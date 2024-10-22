@@ -28,6 +28,7 @@ function App() {
               <Route path="about" element={<About />} />
               <Route path="direction" element={<Direction />} />
               <Route path="home" element={<Home />} />
+              <Route path="/*" element={<Home />} />
               <Route path="regiment" element={<Regiment/>} />
               <Route path="statute" element={<Statute />} />
               <Route path='/*' element={<DashboardScreen />}>
