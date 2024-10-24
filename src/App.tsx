@@ -11,7 +11,9 @@ import { About } from './pages/About/';
 import { Airspace } from './pages/AirSpace';
 import { Direction } from './pages/Direction';
 import { Home } from './pages/Home/';
+import { Login } from './pages/Login/';
 import { Regiment } from './pages/Regiment';
+import { Register } from './pages/Register';
 import { Statute } from './pages/Statute';
 
 
@@ -29,7 +31,9 @@ function App() {
               <Route path="direction" element={<Direction />} />
               <Route path="home" element={<Home />} />
               <Route path="/*" element={<Home />} />
+              <Route path="login" element={<Login />} />
               <Route path="regiment" element={<Regiment/>} />
+              <Route path="register" element={<Register />} />
               <Route path="statute" element={<Statute />} />
               <Route path='/*' element={<DashboardScreen />}>
               </Route>
