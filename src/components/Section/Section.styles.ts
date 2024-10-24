@@ -22,7 +22,15 @@ export const SectionWrap = styled.div`
   .section-content {
     margin: 0 15px;
     padding: 15px; 
-    width: 420px; 
+    width: 420px;
+    
+    ${media.lg`
+      width: 100%;
+  `}
+
+  ${media.md`
+    width: 100%;
+  `}
   }
 
   .section-title {
@@ -38,6 +46,14 @@ export const SectionWrap = styled.div`
     font-weight: 500;
     height: 120px;
     line-height: 2;
+
+    ${media.lg`
+      height: 60px;
+    `}
+
+    ${media.md`
+      height: 90px;
+    `}
 
   }
 
