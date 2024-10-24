@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { media, theme } from "../../styles/Theme/theme";
+import { theme } from "../../styles/Theme/theme";
 
 export const RegisterWrap = styled.div`
   background-color: ${theme.colors.grayLight};
@@ -36,7 +36,7 @@ export const RegisterWrap = styled.div`
     input[type='text'],
     input[type='password'] {
       padding: 10px;
-      border: 1px solid #ced4da;
+      border: 1px solid ${theme.colors.grayLight};
       border-radius: 4px;
       font-size: 16px;
     }
