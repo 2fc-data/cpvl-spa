@@ -2,9 +2,10 @@ import styled, { css } from "styled-components";
 import { media, theme } from "../Theme/theme";
 
 export const Container = styled.div`
+  border: 0px solid ${theme.colors.greenDark};
   max-width: 1320px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 0px;
 `;
 
 export const BlockTitle = styled.div`

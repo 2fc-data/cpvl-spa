@@ -13,7 +13,7 @@ export const HomeWrap = styled.div`
     flex-direction: column;
     height: 88vh;
     justify-content: center;
-    width: auto;
+    width: 100%;
   }
 
   .home-title{

@@ -43,8 +43,9 @@ export const Login = () => {
         </div>
 
 
-        <div>
-          <Link to="/register">Ainda não se cadastrou? Clique aqui.</Link>
+        <div className="redirect-register">
+          <p>Ainda não se cadastrou? </p>
+          <Link to="/register"><u>Clique aqui</u></Link>
         </div>
       </div>
     </LoginWrap>

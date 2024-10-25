@@ -9,14 +9,14 @@ export const BaseLayoutWrap = styled.div`
 
   .main-content-wrapper {
     flex: 1;
-    margin-left: 0px;
-    padding: 32px 20px;
+    padding: 15px 0;
 
     ${media.xxl`
-      padding: 32px 16px;
+      padding: 32px 0px;
     `}
 
     ${media.xl`
+
       padding: 24px 16px;
     `}
 
@@ -25,8 +25,7 @@ export const BaseLayoutWrap = styled.div`
     `}
 
     ${media.md`
-      margin-left: 0;
+      margin-left: 0px;
     `}
   }
-
 `;

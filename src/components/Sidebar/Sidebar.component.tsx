@@ -1,4 +1,5 @@
-import { MdOutlineExitToApp, MdOutlineGroups, MdOutlineHome, MdOutlineLock, MdOutlineSatelliteAlt } from "react-icons/md";
+import { MdClose, MdOutlineGroups, MdOutlineHome, MdOutlineSatelliteAlt } from "react-icons/md";
+import { VscSignOut, VscSignIn  } from "react-icons/vsc";
 import { SidebarWrap } from "./Sidebar.styles";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -12,9 +13,14 @@ export const Sidebar = () => {
   return (
     <SidebarWrap $isSidebarOpen={isSidebarOpen}>
       <div className="sidebar-content">
+        <div className="sidebar-head"> 
+          <button type="button" className="sidebar-close-btn" onClick={() => dispatch(setSidebarState(false))}>
+            <MdClose size={45} />
+          </button>
+        </div>
         <nav className="sidebar-nav scrollbar">
           <ul className="sidenav-list">
-            {["home", "about",  "direction", "login"].map((item, index) => (
+            {["home", "about",  "direction", "login", "logout"].map((item, index) => (
               <li key={index} className="sidenav-item">
                 <Link
                   className="sidenav-link"
@@ -22,11 +28,11 @@ export const Sidebar = () => {
                   onClick={() => dispatch(setSidebarState(false))}
                 >
                   <span className="link-icon">
-                    {index === 0 && <MdOutlineHome size={36} />}
-                    {index === 1 && <MdOutlineSatelliteAlt size={36} />}
-                    {index === 2 && <MdOutlineGroups size={36} />}
-                    {index === 3 && <MdOutlineExitToApp size={36} />}
-                    {index === 4 && <MdOutlineLock size={36} />}
+                    {index === 0 && <MdOutlineHome size={30} />}
+                    {index === 1 && <MdOutlineSatelliteAlt size={30} />}
+                    {index === 2 && <MdOutlineGroups size={30} />}
+                    {index === 3 && <VscSignOut size={30} />}
+                    {index === 4 && <VscSignIn size={30} />}
                   </span>
                   <span className="link-text">{item}</span>
                 </Link>
@@ -34,6 +40,7 @@ export const Sidebar = () => {
             ))}
           </ul>
         </nav>
+
       </div>
     </SidebarWrap>
   );
