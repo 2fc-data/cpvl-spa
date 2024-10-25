@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState, AppDispatch } from "../../redux/Store";
 import { NavBarWrap } from "./NavBar.styles";
 import { toggleSidebar } from "../../redux/Slices/SidebarSlice";
-import { MdClose, MdOutlineMenu } from "react-icons/md"; 
+import { MdOutlineMenu } from "react-icons/md"; 
 import IconCPVL from "../../assets/Icons/icon_cpvl.svg";
 
 export const NavBar = () => {
@@ -18,7 +18,7 @@ export const NavBar = () => {
             className="sidebar-open-btn"
             onClick={() => dispatch(toggleSidebar())}
           >
-            {isSidebarOpen ? <MdClose size={45} /> : <MdOutlineMenu size={45} />}
+            {isSidebarOpen ? '' : <MdOutlineMenu size={45} />}
           </button>
         </div>
 

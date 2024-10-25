@@ -6,17 +6,16 @@ interface SidebarWrapProps {
 }
 
 export const SidebarWrap = styled.div<SidebarWrapProps>`
-  background: transparent;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 0px 10px;
+  background:  ${theme.colors.white};
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0px 10px;
   color: ${theme.colors.greenComplem};
   height: 100%;
-  left: 0;
-  padding: 9px 0;
+  left: 0px;
   position: fixed;
   top: 0px;
   width: 18%;
   transition: transform 0.4s ease-in-out;  
-  transform: ${({ $isSidebarOpen }) => ($isSidebarOpen ? 'translateY(0)' : 'translateY(-100%)')};
+  transform: ${({ $isSidebarOpen }) => ($isSidebarOpen ? 'translatex(0)' : 'translatex(-100%)')};
 
   ${media.xxl`
     /* background: ${theme.colors.yellow}; */
@@ -44,15 +43,34 @@ export const SidebarWrap = styled.div<SidebarWrapProps>`
     height: 100%;
   }
 
-  .sidebar-nav {
-    background-color: ${theme.colors.white};
+  .sidebar-head {
+    align-items: center;
+    display: flex;
+    height: 320px;
+    justify-content: right;
+    padding: 0 20px;
+    color: ${theme.colors.white};
+  }
+
+  .sidebar-close-btn {
+    color: ${theme.colors.greenComplem};
+    cursor: pointer;
+    transition: transform 0.4s ease-out-in;  
+  }
+
+  .sidebar-nav {    
     flex: 1;
-    margin-top: 25%;
-    min-height: calc(100% - 90px);
+    min-height: calc(100% - 109px);
     overflow-y: auto;
-    padding: 32px 20px;
+    padding: 30px 20px;
 
     ${media.xl`
+      min-height: calc(100% - 101px);
+      padding: 24px 16px;
+    `}
+
+    ${media.lg`
+      min-height: calc(100% - 89px);
       padding: 24px 16px;
     `}
 

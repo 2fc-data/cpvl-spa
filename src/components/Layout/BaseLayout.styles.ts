@@ -3,6 +3,7 @@ import { theme, media } from "../../styles/Theme/theme";
 
 export const BaseLayoutWrap = styled.div`
   color: ${theme.colors.greenDark};
+  /* background-color: ${theme.colors.white}; */
   display: flex;
   min-height: 100vh;
   width: 100%;
@@ -25,8 +26,7 @@ export const BaseLayoutWrap = styled.div`
     `}
 
     ${media.md`
-      margin-left: 0;
+      margin-left: 0px;
     `}
   }
-
 `;
