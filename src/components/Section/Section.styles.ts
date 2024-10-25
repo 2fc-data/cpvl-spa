@@ -7,30 +7,37 @@ export const SectionWrap = styled.div`
   margin: 30px 0;
   padding: 45px 0px;
 
+  ${media.xl`
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 0;
+  `}
+
   ${media.lg`
     flex-direction: column;
     justify-content: center;
-    padding: 20px 0;
+    padding: 8px 0;
   `}
 
   ${media.md`
     flex-direction: column;
     justify-content: center;
-    padding: 15px 0;
+    padding: 5px 0;
   `}
 
   .section-content {
-    margin: 0 15px;
+    margin: 15px 0;
     padding: 15px; 
-    width: 420px;
-    
+    width: 360px;
+    width: 100%;
+
     ${media.lg`
       width: 100%;
-  `}
+    `}
 
-  ${media.md`
-    width: 100%;
-  `}
+    ${media.md`
+      width: 100%;
+    `}
   }
 
   .section-title {

@@ -56,6 +56,11 @@ export const SidebarWrap = styled.div<SidebarWrapProps>`
     color: ${theme.colors.greenComplem};
     cursor: pointer;
     transition: transform 0.4s ease-out-in;  
+
+    &:hover {
+      transform: rotate(180deg);
+      transition: ${theme.transitions.easeInOut};
+    }
   }
 
   .sidebar-nav {    

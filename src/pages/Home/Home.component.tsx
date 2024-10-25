@@ -1,4 +1,4 @@
-import { HomeWrap } from "./Home.styles.ts"
+import { HomeWrap } from "./Home.styles"
 
 export const Home = () => {
   return (

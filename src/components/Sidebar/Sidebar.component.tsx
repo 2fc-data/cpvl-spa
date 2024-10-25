@@ -28,11 +28,11 @@ export const Sidebar = () => {
                   onClick={() => dispatch(setSidebarState(false))}
                 >
                   <span className="link-icon">
-                    {index === 0 && <MdOutlineHome size={36} />}
-                    {index === 1 && <MdOutlineSatelliteAlt size={36} />}
-                    {index === 2 && <MdOutlineGroups size={36} />}
-                    {index === 3 && <VscSignIn size={36} />}
-                    {index === 4 && <VscSignOut size={36} />}
+                    {index === 0 && <MdOutlineHome size={30} />}
+                    {index === 1 && <MdOutlineSatelliteAlt size={30} />}
+                    {index === 2 && <MdOutlineGroups size={30} />}
+                    {index === 3 && <VscSignOut size={30} />}
+                    {index === 4 && <VscSignIn size={30} />}
                   </span>
                   <span className="link-text">{item}</span>
                 </Link>

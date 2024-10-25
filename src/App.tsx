@@ -3,6 +3,7 @@ import 'normalize.css';
 import { BaseLayout } from './components/Layout/';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { DashboardScreen } from './screens/Dashboard';
+import { Container } from './styles/Global/default';
 import { GlobalStyles } from './styles/Global/globalStyles';
 import { theme } from './styles/Theme/theme';
 import { ThemeProvider } from 'styled-components';
@@ -24,21 +25,24 @@ function App() {
       <ThemeProvider theme={theme}>
         <Router>
           <GlobalStyles />
-          <Routes>
-            <Route path='/*' element={<BaseLayout />}>
-              <Route path="airspace" element={<Airspace />} />
-              <Route path="about" element={<About />} />
-              <Route path="direction" element={<Direction />} />
-              <Route path="home" element={<Home />} />
-              <Route path="/*" element={<Home />} />
-              <Route path="login" element={<Login />} />
-              <Route path="regiment" element={<Regiment/>} />
-              <Route path="register" element={<Register />} />
-              <Route path="statute" element={<Statute />} />
-              <Route path='/*' element={<DashboardScreen />}>
+          <Container>
+            <Routes>
+              <Route path='/*' element={<BaseLayout />}>
+                <Route path="airspace" element={<Airspace />} />
+                <Route path="about" element={<About />} />
+                <Route path="direction" element={<Direction />} />
+                <Route path="home" element={<Home />} />
+                <Route path="/*" element={<Home />} />
+                <Route path="logout" element={<Home />} />
+                <Route path="login" element={<Login />} />
+                <Route path="regiment" element={<Regiment />} />
+                <Route path="register" element={<Register />} />
+                <Route path="statute" element={<Statute />} />
+                <Route path='/*' element={<DashboardScreen />}>
+                </Route>
               </Route>
-            </Route>
-          </Routes>
+            </Routes>
+          </Container>
         </Router>
       </ThemeProvider>
     </>

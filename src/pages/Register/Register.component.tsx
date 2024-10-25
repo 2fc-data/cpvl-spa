@@ -8,6 +8,7 @@ export const Register = () => {
     formState: { errors }
   } = useForm();
 
+  
   const onSubmit = (data: unknown) => {
     console.log(data);
   };

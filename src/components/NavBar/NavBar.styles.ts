@@ -2,23 +2,14 @@ import styled from "styled-components";
 import { media, theme } from "../../styles/Theme/theme";
 
 export const NavBarWrap = styled.header`
-  border: 0px solid ${theme.colors.blueSky1};
-  margin-bottom: 30px;
-  padding: 0px 60px;
-  
-  ${media.xl` 
-    padding: 0px 30px;
-  `}
 
-  ${media.md`
-    padding: 0px 20px;
-  `}
-
-  .navbar-content {
-    color: ${theme.colors.greenComplem};
+  .navbar-content {    
     align-items: center;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 0px 60px;
+    width: 100%;
   }
 
   .navbar-head-main {
@@ -40,12 +31,12 @@ export const NavBarWrap = styled.header`
 
     ${media.xl`
       display: inline-flex; 
-      padding: 10px;
+      padding: 0 10px;
     `}
 
     ${media.md`
       display: inline-flex; 
-      padding: 10px;
+      padding: 0 10px;
     `}
   }
 
