@@ -4,10 +4,10 @@ import image_regiment from "../../assets/Images/2rampa.jpg";
 
 export const RegimentWrap = styled.div`
 
-  .regiment-content {
+  .regiment-content {    
     align-items: center;
     display: flex;
-    height: 88vh;
+    flex-direction: column;    
     justify-content: center;
     width: auto;
   }
@@ -17,28 +17,13 @@ export const RegimentWrap = styled.div`
     background-image: url(${image_regiment});
     background-size: cover;
     background-position: center;
-    display: flex;
-    justify-content: center;
+    display: flex;    
     height: 30vh;
+    justify-content: center;
+    width: 100%;
   }
 
-  .regiment-block {
-    align-items: start;
-    font-family: roboto, sans-serif;    
-    display: flex;
-    justify-content: space-around;
-    height: auto;
-    margin: 50px 0px;
-    text-align: justify;
-    padding: 5px;
-    width: 90vw;
-
-    ${media.md`
-      display: block;
-    `}
-  }
-  
-  .regiment-title{
+  .regiment-header-title{
     align-items: center;
     border: 2px solid ${theme.colors.white};
     color: ${theme.colors.white};     
@@ -46,49 +31,67 @@ export const RegimentWrap = styled.div`
     font-size: 18px;
     font-weight: 500;
     justify-content: center;
-    margin-top: -1em;
-    padding: 12px 20px;
+    padding: 6px 20px;
     text-transform: uppercase;
     width: auto;
   }
 
-  .regiment-block-img {
-    align-items: center;
-    background-size: cover;
-    background-position: center;
+  .regiment-section{
+    background-color: ${theme.colors.grayLight};
     display: flex;
-    height: 30vh;
-    justify-content: center;
-    width: 50vw;
+    min-height: 10vh;
+    justify-content: space-around;
+    margin: 90px 0;
+    width: 100%;
 
     ${media.md`
-      width: 100%;
+      display: block;
     `}
   }
 
-  .regiment-text{
-    align-items: center;    
+  .regiment-block {
+    align-items: start;
+    font-family: roboto, sans-serif;    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 20px 0px;
+    text-align: justify;
+    width: 45%;
+  }
+
+  .regiment-block-btn {   
+    align-items: end;  
+    display: flex;    
+    margin: 20px 0px;
+    padding: 25px;
+    width: 49%;
+  }
+
+  .regiment-block-title {
+    align-items: center;
+    color: ${theme.colors.greenComplem};
+    display: flex; 
+    font-size: 3rem;
+    font-weight: 500;      
+    margin-top: -1em;
+    padding: 30px 20px 5px;
+    width: auto; 
+  }
+  
+  .regiment-block-text{
+    align-items: center;  
+    background-color: ${theme.colors.grayLight};  
     font-size: 14px;
     font-weight: 500;
     justify-content: center;
     line-height: 2;
-    margin: 10px 0px;
-    padding: 10px 0px;
+    padding: 10px 25px;
     text-align: justify;
     width: auto;
-
-    ${media.lg`
-      max-width: 100%;
-      padding: 20px 0px;
-    `}
-
-    ${media.md`
-      max-width: 100%;
-      padding: 20px 0px;
-    `}
   }
-
-  .paragraph {
+  
+  .regiment-block-paragraph {
     padding: 10px 60px;
 
     ${media.lg`
@@ -98,5 +101,25 @@ export const RegimentWrap = styled.div`
     ${media.md`
       padding: 10px 60px;
     `}
+  }
+
+  .regiment-link {
+    align-items: center;
+    display: flex;
+    background-color: ${theme.colors.greenComplem};
+    border: 1px solid ${theme.colors.grayLight};
+    border-radius: 5px;
+    color: ${theme.colors.grayLight};
+    justify-content: center;
+    padding: 9px 9px ;
+    width: 135px;
+
+    &:hover {
+      background-color: ${theme.colors.white};
+      border: 1px solid ${theme.colors.greenComplem};
+      border-radius: 3px;
+      color: ${theme.colors.greenComplem};
+      cursor: pointer;
+    }
   }
 `

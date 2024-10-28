@@ -4,10 +4,10 @@ import image_airspace from "../../assets/Images/3condicao.jpg";
 
 export const AirspaceWrap = styled.div`
 
-  .airspace-content {
+  .airspace-content {    
     align-items: center;
     display: flex;
-    height: 88vh;
+    flex-direction: column;    
     justify-content: center;
     width: auto;
   }
@@ -17,26 +17,13 @@ export const AirspaceWrap = styled.div`
     background-image: url(${image_airspace});
     background-size: cover;
     background-position: center;
-    display: flex;
-    justify-content: center;
+    display: flex;    
     height: 30vh;
+    justify-content: center;
+    width: 100%;
   }
 
-  .airspace-block {
-    align-items: start;
-    font-family: roboto, sans-serif;    
-    display: flex;
-    justify-content: space-around;
-    height: auto;
-    margin: 50px 0px;
-    text-align: justify;
-
-    ${media.md`
-      display: block;
-    `}
-  }
-  
-  .airspace-title{
+  .airspace-header-title{
     align-items: center;
     border: 2px solid ${theme.colors.white};
     color: ${theme.colors.white};     
@@ -44,72 +31,88 @@ export const AirspaceWrap = styled.div`
     font-size: 18px;
     font-weight: 500;
     justify-content: center;
-    margin-top: -1em;
-    padding: 12px 20px;
+    padding: 6px 20px;
     text-transform: uppercase;
     width: auto;
   }
 
-  .airspace-block-img {
-    align-items: center;
-    background-size: cover;
-    background-position: center;
+  .airspace-section{
+    background-color: ${theme.colors.grayLight};
     display: flex;
-    height: 30vh;
-    justify-content: center;
-    width: 50vw;
+    min-height: 10vh;
+    justify-content: space-around;
+    margin: 90px 0;
+    width: 100%;
 
     ${media.md`
-      width: 100%;
+      display: block;
     `}
   }
 
-  .airspace-text{
-    align-items: center;    
+  .airspace-block {
+    align-items: start;
+    font-family: roboto, sans-serif;    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 20px 0px;
+    text-align: justify;
+    width: 45%;
+  }
+
+  .airspace-block-btn {   
+    align-items: end;  
+    display: flex;    
+    margin: 20px 0px;
+    padding: 25px;
+    width: 49%;
+  }
+
+  .airspace-block-title {
+    align-items: center;
+    color: ${theme.colors.greenComplem};
+    display: flex; 
+    font-size: 3rem;
+    font-weight: 500;      
+    margin-top: -1em;
+    padding: 30px 20px 5px;
+    width: auto; 
+  }
+  
+  .airspace-block-text{
+    align-items: center;  
+    background-color: ${theme.colors.grayLight};  
     font-size: 14px;
     font-weight: 500;
     justify-content: center;
     line-height: 2;
-    margin: 10px 0px;
-    padding: 10px 0px;
+    padding: 10px 25px;
     text-align: justify;
     width: auto;
-
-    .paragraph {
-      padding: 10px 60px;
-
-      ${media.lg`
-        padding: 10px 60px;
-      `}
-
-      ${media.md`
-        padding: 10px 60px;
-      `}
-    }
+  }
+  
+  .airspace-block-paragraph {
+    padding: 10px 60px;
 
     ${media.lg`
-      max-width: 100%;
-      padding: 20px 0px;
+      padding: 10px 60px;
     `}
 
     ${media.md`
-      max-width: 100%;
-      padding: 20px 0px;
+      padding: 10px 60px;
     `}
   }
-
 
   .airspace-link {
     align-items: center;
     display: flex;
     background-color: ${theme.colors.greenComplem};
-    border: 1px solid ${theme.colors.white};
+    border: 1px solid ${theme.colors.grayLight};
     border-radius: 5px;
-    color: ${theme.colors.white};
+    color: ${theme.colors.grayLight};
     justify-content: center;
-    margin-top: 15px;
-    padding: 2px 5px ;
-    width: 130px;
+    padding: 9px 9px ;
+    width: 135px;
 
     &:hover {
       background-color: ${theme.colors.white};

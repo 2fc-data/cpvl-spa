@@ -61,7 +61,6 @@ export const SectionWrap = styled.div`
     ${media.md`
       height: 90px;
     `}
-
   }
 
   .section-link {
