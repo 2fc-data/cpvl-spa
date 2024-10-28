@@ -5,10 +5,10 @@ import image_paulo_sergio from "../../assets/Images/baianoVoandoSul_pb.jpg"
 
 export const AboutWrap = styled.div`
 
-  .about-content {    
+.about-content {    
     align-items: center;
-    display: flex-wrap;
-    height: 88vh;
+    display: flex;
+    flex-direction: column;    
     justify-content: center;
     width: auto;
   }
@@ -18,44 +18,88 @@ export const AboutWrap = styled.div`
     background-image: url(${image_about});
     background-size: cover;
     background-position: center;
-    display: flex;
-    justify-content: center;
+    display: flex;    
     height: 30vh;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .about-header-title{
+    align-items: center;
+    border: 2px solid ${theme.colors.white};
+    color: ${theme.colors.white};     
+    display: flex; 
+    font-size: 18px;
+    font-weight: 500;
+    justify-content: center;
+    padding: 6px 20px;
+    text-transform: uppercase;
+    width: auto;
+  }
+
+  .about-section{
+    background-color: ${theme.colors.grayLight};
+    display: flex;
+    min-height: 10vh;
+    justify-content: space-around;
+    margin: 90px 0;
+    width: 100%;
+
+    ${media.md`
+      display: block;
+    `}
   }
 
   .about-block {
     align-items: start;
     font-family: roboto, sans-serif;    
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    height: auto;
-    margin: 50px 0px;
+    margin: 20px 0px;
     text-align: justify;
+    width: 45%;
+  }
 
-    ${media.md`
-      display: block;
-    `}
+  .about-block-title {
+    align-items: center;
+    color: ${theme.colors.greenComplem};
+    display: flex; 
+    font-size: 3rem;
+    font-weight: 500;      
+    margin-top: -1em;
+    padding: 30px 20px 5px;
+    width: auto; 
   }
   
-  .about-title{
-    align-items: center;
-    border: 2px solid ${theme.colors.white};
-    color: ${theme.colors.white};     
-    display: flex; 
-    font-size: 18px;
-    font-weight: 700;
+  .about-block-text{
+    align-items: center;  
+    background-color: ${theme.colors.grayLight};  
+    font-size: 14px;
+    font-weight: 500;
     justify-content: center;
-    margin-top: -1em;
-    padding: 12px 20px;
-    text-transform: uppercase;
+    line-height: 2;
+    padding: 10px 25px;
+    text-align: justify;
     width: auto;
+  }
+  
+  .about-block-paragraph {
+    padding: 10px 60px;
+
+    ${media.lg`
+      padding: 10px 60px;
+    `}
+
+    ${media.md`
+      padding: 10px 60px;
+    `}
   }
 
   .about-block-img {
     align-items: center;
     background-image: url(${image_paulo_sergio});
-    background-size: cover;
-    background-position: center;
+    background-size: cover;    
     display: flex;
     height: 30vh;
     justify-content: center;
@@ -66,18 +110,23 @@ export const AboutWrap = styled.div`
     `}
   }
 
-  .about-text{
-    align-items: center;    
-    font-size: 14px;
-    font-weight: 500;
+  .about-link {
+    align-items: center;
+    display: flex;
+    background-color: ${theme.colors.greenComplem};
+    border: 1px solid ${theme.colors.grayLight};
+    border-radius: 5px;
+    color: ${theme.colors.grayLight};
     justify-content: center;
-    max-width: 600px;
-    line-height: 2;
-    padding: 12px 20px;
+    padding: 9px 9px ;
+    width: 135px;
 
-    ${media.md`
-      max-width: 100%;
-    `}
+    &:hover {
+      background-color: ${theme.colors.white};
+      border: 1px solid ${theme.colors.greenComplem};
+      border-radius: 3px;
+      color: ${theme.colors.greenComplem};
+      cursor: pointer;
+    }
   }
-
 `
