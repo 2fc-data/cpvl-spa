@@ -17,7 +17,7 @@ export const About = () => {
             seu sonho de voar. Sempre com muita admiração ele abservava e
             desfrutava da serra de são Domingos, a qual se localiza do lado
             norte da cidade, e um belo dia percebeu que ja tinha o local de
-            decolagem, só faltava a asa.</div><br />
+            decolagem, só faltava a asa.</div>
 
           <div className="about-block-text">
             Em 12/12/1976 Paulo Sérgio Trevisan fez sua própria decolagem de

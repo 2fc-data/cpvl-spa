@@ -44,8 +44,14 @@ export const StatuteWrap = styled.div`
     margin: 90px 0;
     width: 100%;
 
+    ${media.lg`
+      display: block;
+      margin: 30px 0;
+    `} 
+
     ${media.md`
       display: block;
+      margin: 30px 0;
     `}
   }
 
@@ -58,6 +64,15 @@ export const StatuteWrap = styled.div`
     margin: 20px 0px;
     text-align: justify;
     width: 45%;
+
+    ${media.lg`
+      width: 100%;
+    `}
+     
+    ${media.md`
+      width: 100%;
+    `}
+
   }
 
   .statute-block-btn {   

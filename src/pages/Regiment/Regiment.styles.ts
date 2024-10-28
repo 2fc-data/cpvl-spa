@@ -44,8 +44,14 @@ export const RegimentWrap = styled.div`
     margin: 90px 0;
     width: 100%;
 
+    ${media.lg`
+      display: block;
+      margin: 30px 0;
+    `}
+
     ${media.md`
       display: block;
+      margin: 30px 0;
     `}
   }
 
@@ -58,6 +64,14 @@ export const RegimentWrap = styled.div`
     margin: 20px 0px;
     text-align: justify;
     width: 45%;
+
+    ${media.lg`
+      width: 100%;
+    `}
+
+    ${media.md`
+      width: 100%;
+    `}
   }
 
   .regiment-block-btn {   
@@ -91,18 +105,6 @@ export const RegimentWrap = styled.div`
     width: auto;
   }
   
-  .regiment-block-paragraph {
-    padding: 10px 60px;
-
-    ${media.lg`
-      padding: 10px 60px;
-    `}
-
-    ${media.md`
-      padding: 10px 60px;
-    `}
-  }
-
   .regiment-link {
     align-items: center;
     display: flex;
