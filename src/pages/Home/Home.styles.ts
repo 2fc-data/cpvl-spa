@@ -24,13 +24,19 @@ export const HomeWrap = styled.div`
     font-size: 32px;
     font-weight: 700;
     justify-content: center;
-    margin-top: -30rem;
+    margin-top: -12rem;
     padding: 12px 20px;
     text-transform: uppercase;
 
-    ${media.md`
-      font-size: 24px;
+    ${media.lg`
+      font-size: 28px;
       margin-top: -20rem; 
+      padding: 6px 10px;
+    `}
+
+    ${media.md`
+      font-size: 20px;
+      margin-top: -15rem; 
       padding: 6px 10px;
     `}
   }
