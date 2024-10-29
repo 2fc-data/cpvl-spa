@@ -10,6 +10,14 @@ export const NavBarWrap = styled.header`
     margin-bottom: 30px;
     padding: 0px 60px;
     width: 100%;
+
+    ${media.lg`
+      padding: 0px 15px;
+    `}
+
+    ${media.md`      
+      padding: 0px 10px;
+    `}
   }
 
   .navbar-head-main {
@@ -23,21 +31,12 @@ export const NavBarWrap = styled.header`
     display: inline-flex; 
     align-items: center;
     justify-content: center;
+    padding-top: 15px;
     transition: ${theme.transitions.easeInOut};
 
     &:hover {
       opacity: 0.9;
     }
-
-    ${media.xl`
-      display: inline-flex; 
-      padding: 0 10px;
-    `}
-
-    ${media.md`
-      display: inline-flex; 
-      padding: 0 10px;
-    `}
   }
 
   .navbar-head-top {
