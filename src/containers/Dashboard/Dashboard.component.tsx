@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 import { useLocalStorage } from 'usehooks-ts';
 import { NavBar } from '../../components/NavBar/NavBar.component';
 import { API, getURI } from '../../services';
-import { IAllowedRoutes } from '../../components/NavBar/NavBar.component';
+import { IAllowedRoutes } from '../../components/Sidebar/Sidebar.component';
 import { useFetch } from '../../hooks';
 import { Outlet, useNavigate } from 'react-router-dom';
 
