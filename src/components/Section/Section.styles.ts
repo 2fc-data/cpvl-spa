@@ -4,47 +4,51 @@ import { media, theme } from "../../styles/Theme/theme";
 export const SectionWrap = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 30px 0;
-  padding: 45px 0px;
+  margin: 15px 0;
+  padding: 30px 0px;
 
   ${media.xl`
-    flex-direction: column;
-    justify-content: center;
+    margin: 15px 0;
     padding: 10px 0;
   `}
 
   ${media.lg`
     flex-direction: column;
-    justify-content: center;
     padding: 8px 0;
+    text-align: justify;
   `}
 
   ${media.md`
     flex-direction: column;
     justify-content: center;
     padding: 5px 0;
+    text-align: justify;
   `}
 
   .section-content {
     margin: 15px 0;
     padding: 15px; 
-    width: 360px;
     width: 100%;
 
     ${media.lg`
-      width: 100%;
+      justify-items: center;
+      padding: 15px 45px; 
     `}
 
     ${media.md`
-      width: 100%;
+      justify-items: center;
+      padding: 15px 45px; 
     `}
   }
 
   .section-title {
+    display: flex;
     border-bottom: 2px solid ${theme.colors.greenComplem};
     font-size: 16px;
     font-weight: 700;
+    justify-content: center;
     text-transform: uppercase;
+    width: 100%;
   }
 
   .section-description {

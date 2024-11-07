@@ -39,8 +39,9 @@ export const DirectionWrap = styled.div`
   .direction-section{
     align-items: center;    
     background-color: ${theme.colors.grayLight};
-    display: block;
-    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 60px 0;
     padding: 10px;
     width: 100%;
@@ -59,10 +60,11 @@ export const DirectionWrap = styled.div`
     display: grid;
     grid-template-columns: 20% 30% auto;
     column-gap: 25px;
-    margin-top: 15px;
+    margin: 15px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-width: 90%;
   }
 
   .grid-item-col1 {
