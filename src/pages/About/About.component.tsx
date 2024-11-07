@@ -1,4 +1,3 @@
-
 import { AboutWrap } from "./About.styles.ts"
 
 export const About = () => {
