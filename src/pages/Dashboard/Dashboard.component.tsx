@@ -1,33 +1,64 @@
-import { MdAttachMoney, MdBarChart } from "react-icons/md"
-import { BlockContentWrap } from "../../styles/Global/default.ts"
-import { DashboardWrap } from "./Dashboard.styles.ts"
+import { useCallback } from 'react';
+import { useLocalStorage } from 'usehooks-ts';
+import { NavBar } from '../../components/NavBar';
+import { API, getURI } from '../../services';
+import { IAllowedRoutes } from '../../components/Sidebar/Sidebar.component';
+import { useFetch } from `../../hooks`;
+import { Outlet, useNavigate } from 'react-router-dom';
+import { DashboardWrap } from './Dashboard.styles';
+import { BlockContentWrap } from '../../styles/Global/default';
 
-export const Dashboard = () => {
+
+export const DashboardHome = () => {
   return (
     <DashboardWrap>
       <div className='dash-board-content'>
         <div className="dboard-block dboard-summary-blocks">
           <BlockContentWrap className="dboard-block">
-            <div className="summary-block-icon">
-              <MdBarChart/>
-            </div>
-            <div className="summary-block-details">
-              <p className="summary-block-ttl">Pagamentos</p>
-              <div className="summary-block-val">$350.5</div>
-            </div>
-          </BlockContentWrap>
-
-          <BlockContentWrap className="dboard-block dboard-block-sales">
-            <div className="summary-block-icon">
-              <MdAttachMoney />
-            </div>
-            <div className="summary-block-details">
-              <p className="summary-block-ttl">Despesas</p>
-              <div className="summary-block-val">$150.3</div>
-            </div>
+            Utilize o menu 'RESTRITO' para acessar os serviços.
           </BlockContentWrap>
         </div>
       </div>
     </DashboardWrap>
+  );
+};
+
+export const Dashboard = () => {
+
+  const { data: allowedRoutes } = useFetch<IAllowedRoutes[]>({
+    url: getURI(API.profile)
+  });
+
+  const [, setIsLogged] = useLocalStorage(
+    process.env.REACT_APP_LOGGED_KEY,
+    false
+  );
+
+  const navigate = useNavigate();
+
+  const doLogout = useCallback(() => {
+    setIsLogged(false);
+  }, [setIsLogged]);
+
+  const navTo = useCallback(
+    (link: IAllowedRoutes) => {
+      navigate(link.route);
+    },
+    [navigate]
+  );
+
+  if (!allowedRoutes) return null;
+
+  return (
+    <>
+      <NavBar
+        onLogout={doLogout}
+        allowedRoutes={allowedRoutes}
+        onNav={navTo}
+      />
+      <DashboardWrap>
+        <Outlet />
+      </DashboardWrap>
+    </>
   )
 }

@@ -26,31 +26,31 @@ export const Sidebar = ({ onLogout, onNav, allowedRoutes }: IProps) => {
 
   const navigate = useNavigate();
   const [isLogged] = useLocalStorage(process.env.REACT_APP_LOGGED_KEY!, false);
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  // const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [isPilotMenuOpened, setIsPilotMenuOpened] = useState(false);
-  const [isPublicMenuOpened, setIsPublicMenuOpened] = useState(false);
+  // const [isPublicMenuOpened, setIsPublicMenuOpened] = useState(false);
 
-  const handlePublicMenuClick = (
-    event: React.MouseEvent<HTMLButtonElement>
-  ) => {
-    setAnchorEl(event.currentTarget);
-    setIsPublicMenuOpened(true);
-  };
+  // const handlePublicMenuClick = (
+  //   event: React.MouseEvent<HTMLButtonElement>
+  // ) => {
+  //   setAnchorEl(event.currentTarget);
+  //   setIsPublicMenuOpened(true);
+  // };
 
   const handlePilotMenuClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
     setIsPilotMenuOpened(true);
   };
 
-  const handleClose = () => {
-    setAnchorEl(null);
-    setIsPilotMenuOpened(false);
-    setIsPublicMenuOpened(false);
-  };
+  // const handleClose = () => {
+  //   setAnchorEl(null);
+  //   setIsPilotMenuOpened(false);
+  //   setIsPublicMenuOpened(false);
+  // };
 
   const handleItemClick = (route: IAllowedRoutes) => {
     onNav(route);
-    handleClose();
+    // handleClose();
   };
 
   return (
@@ -61,13 +61,13 @@ export const Sidebar = ({ onLogout, onNav, allowedRoutes }: IProps) => {
             type="button"
             className="sidebar-close-btn"
             onClick={() => dispatch(setSidebarState(false))}
-            anchorEl={anchorEl}
+            // anchorEl={anchorEl}
             anchorOrigin={{
               horizontal: 'right',
               vertical: 'bottom'
             }}
-            onClose={handleClose}
-            open={isPublicMenuOpened}
+            // onClose={handleClose}
+            // open={isPublicMenuOpened}
           >
             <MdClose size={45} />
           </button>
@@ -116,7 +116,7 @@ export const Sidebar = ({ onLogout, onNav, allowedRoutes }: IProps) => {
                 <button
                   type="button"
                   className="sidenav-link"
-                  onClick={(handleClose) => navigate('/login')}
+                  // onClick={(handleClose) => navigate('/login')}
                 >
                   <VscSignOut size={30} />
                   <span className="link-text">Sair</span>
@@ -134,7 +134,7 @@ export const Sidebar = ({ onLogout, onNav, allowedRoutes }: IProps) => {
 
                 <ul
                   id="main-menu"          
-                  anchorEl={anchorEl}
+                  // anchorEl={anchorEl}
                   open={isPilotMenuOpened}
                   onClose={handleClose}
                 >
