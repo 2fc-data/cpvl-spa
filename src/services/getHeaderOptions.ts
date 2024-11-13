@@ -1,4 +1,4 @@
-export const getHeaderOptions = (): unknown => ({
+const getHeaderOptions = (): unknown => ({
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json'
@@ -7,3 +7,4 @@ export const getHeaderOptions = (): unknown => ({
   cache: 'no-cache'
 });
 
+export default getHeaderOptions;

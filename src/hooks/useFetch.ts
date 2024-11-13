@@ -1,18 +1,19 @@
 import { useEffect, useRef, useState } from 'react';
-import { useFetch as tsUseFetch, useLocalStorage } from 'usehooks-ts';
+import { useLocalStorage } from 'usehooks-ts';
+import { useFetch as tsUseFetch } from '.reactQuary';
 import { getHeaderOptions } from '../services';
 import { useNavigate } from 'react-router-dom';
 
 interface IProps {
   method?: 'POST' | 'GET' | 'PUT' | 'DELETE';
   url?: string;
-  body?: any;
+  body?: unknown;
   options?: RequestInit;
-}
+} 
 
 const useFetch = <T>({ method = 'GET', url, body, options }: IProps) => {
   const [, setIsLogged] = useLocalStorage(
-    process.env.REACT_APP_LOGGED_KEY,
+    import.meta.env.VITE_REACT_APP_LOGGED_KEY,
     false
   );
   const navigate = useNavigate();
@@ -20,12 +21,12 @@ const useFetch = <T>({ method = 'GET', url, body, options }: IProps) => {
   const postBody = useRef(body);
   const { data, error } = tsUseFetch<T>(fetchURL, {
     method,
-    ...(postBody.current && { body: JSON.stringify(postBody.current) }),
+    ...(postBody.current ? { body: JSON.stringify(postBody.current) } : {}),
     ...getHeaderOptions(),
     ...options
   });
 
-  const doFetch = ({ url, body }: { url: string; body: any }) => {
+  const doFetch = ({ url, body }: { url: string; body: unknown }) => {
     if (body) {
       postBody.current = body;
     }

@@ -1,10 +1,11 @@
 import { useCallback } from 'react';
 import { useLocalStorage } from 'usehooks-ts';
-import { NavBar } from '../../components/NavBar';
+import { Sidebar } from '../../components/Sidebar';
 import { API, getURI } from '../../services';
 import { IAllowedRoutes } from '../../components/Sidebar/Sidebar.component';
-import { useFetch } from `../../hooks`;
+import { useFetch } from '../../hooks';
 import { Outlet, useNavigate } from 'react-router-dom';
+
 import { DashboardWrap } from './Dashboard.styles';
 import { BlockContentWrap } from '../../styles/Global/default';
 
@@ -30,7 +31,7 @@ export const Dashboard = () => {
   });
 
   const [, setIsLogged] = useLocalStorage(
-    process.env.REACT_APP_LOGGED_KEY,
+    import.meta.env.VITE_REACT_APP_LOGGED_KEY,
     false
   );
 
@@ -51,7 +52,7 @@ export const Dashboard = () => {
 
   return (
     <>
-      <NavBar
+      <Sidebar
         onLogout={doLogout}
         allowedRoutes={allowedRoutes}
         onNav={navTo}
