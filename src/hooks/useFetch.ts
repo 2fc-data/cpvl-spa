@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useLocalStorage } from 'usehooks-ts';
-import { useFetch as tsUseFetch } from '.reactQuary';
+import { useQuery } from '@tanstack/react-query';
 import { getHeaderOptions } from '../services';
 import { useNavigate } from 'react-router-dom';
 
@@ -17,14 +17,28 @@ const useFetch = <T>({ method = 'GET', url, body, options }: IProps) => {
     false
   );
   const navigate = useNavigate();
-  const [fetchURL, setFetchURL] = useState<string | undefined>(url);
+  const [fetchURL, setFetchURL] = useState<string>(url || '');
   const postBody = useRef(body);
-  const { data, error } = tsUseFetch<T>(fetchURL, {
-    method,
-    ...(postBody.current ? { body: JSON.stringify(postBody.current) } : {}),
-    ...getHeaderOptions(),
-    ...options
-  });
+  
+  // eslint-disable-next-line no-empty-pattern
+  const {} = useQuery({
+    queryKey: [fetchURL],
+    queryFn: async () => {
+      return fetch(fetchURL, {
+        method,
+        ...(postBody.current ? { body: JSON.stringify(postBody.current) } : {}),
+        ...getHeaderOptions(),
+        ...options
+      }).then((res) => res.json());
+    }
+  })
+  
+  // const { data, error } = tsUseFetch<T>(fetchURL, {
+  //   method,
+  //   ...(postBody.current ? { body: JSON.stringify(postBody.current) } : {}),
+  //   ...getHeaderOptions(),
+  //   ...options
+  // });
 
   const doFetch = ({ url, body }: { url: string; body: unknown }) => {
     if (body) {

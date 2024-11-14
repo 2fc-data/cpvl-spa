@@ -1,4 +1,4 @@
-const BASE_URI = process.env.REACT_APP_API_URI;
+const BASE_URI = import.meta.env.VITE_REACT_APP_API_URI;
 
 export const API = {
   address: 'address',

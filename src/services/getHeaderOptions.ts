@@ -1,4 +1,4 @@
-const getHeaderOptions = (): unknown => ({
+const getHeaderOptions = ():  any => ({
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json'
