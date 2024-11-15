@@ -26,13 +26,9 @@ export const Sidebar = ({ onLogout, onNav, allowedRoutes }: IProps) => {
   const isSidebarOpen = useSelector((state: RootState) => state.sidebar.isSidebarOpen);
   const isPrivateMenuOpen = useSelector((state: RootState) => state.privateMenu.isPrivateMenuOpen);
 
-<<<<<<< HEAD
-  const navigate = useNavigate();  
-=======
   const publicMenu = ["home", "about", "direction", "login"];
 
 
->>>>>>> main
   const [isLogged] = useLocalStorage(import.meta.env.VITE_REACT_APP_LOGGED_KEY!, false);
   // const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   // const [isPrivateMenuOpened, setIsPrivateMenuOpened] = useState(false);
