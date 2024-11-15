@@ -25,16 +25,14 @@ export const Sidebar = ({ onLogout, onNav, allowedRoutes }: IProps) => {
   const dispatch: AppDispatch = useDispatch();
   const isSidebarOpen = useSelector((state: RootState) => state.sidebar.isSidebarOpen);
   const isPrivateMenuOpen = useSelector((state: RootState) => state.privateMenu.isPrivateMenuOpen);
-
   const publicMenu = ["home", "about", "direction", "login"];
-
 
   const [isLogged] = useLocalStorage(import.meta.env.VITE_REACT_APP_LOGGED_KEY!, false);
   // const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   // const [isPrivateMenuOpened, setIsPrivateMenuOpened] = useState(false);
   // const [isPublicMenuOpened, setIsPublicMenuOpened] = useState(false);
 
-  console.log('--> ', isLogged) 
+  console.log(isLogged) 
   // const handlePublicMenuClick = (
   //   event: React.MouseEvent<HTMLButtonElement>
   // ) => {
@@ -124,7 +122,7 @@ export const Sidebar = ({ onLogout, onNav, allowedRoutes }: IProps) => {
                   </li>
                 </ul>
 
-                {/* <li>
+                <li>
                   <button
                     type="button"
                     className="sidenav-link"
@@ -136,7 +134,7 @@ export const Sidebar = ({ onLogout, onNav, allowedRoutes }: IProps) => {
                     <VscSignIn size={30} />
                     <span className="link-text">Sair</span>
                   </button>
-                </li> */}
+                </li>
               </>
             )}
           </ul>
@@ -146,27 +144,3 @@ export const Sidebar = ({ onLogout, onNav, allowedRoutes }: IProps) => {
     </SidebarWrap>
   );
 };
-
-
-// <nav className="sidebar-nav scrollbar">
-// <ul className="sidenav-list">
-//   {["home", "about",  "direction", "login", "logout"].map((item, index) => (
-//     <li key={index} className="sidenav-item">
-//       <Link
-//         className="sidenav-link"
-//         to={`/${item.toLowerCase()}`}
-//         onClick={() => dispatch(setSidebarState(false))}
-//       >
-//         <span className="link-icon">
-//           {index === 0 && <MdOutlineHome size={30} />}
-//           {index === 1 && <MdOutlineSatelliteAlt size={30} />}
-//           {index === 2 && <MdOutlineGroups size={30} />}
-//           {index === 3 && <VscSignOut size={30} />}
-//           {index === 4 && <VscSignIn size={30} />}
-//         </span>
-//         <span className="link-text">{item}</span>
-//       </Link>
-//     </li>
-//   ))}
-// </ul>
-// </nav>
