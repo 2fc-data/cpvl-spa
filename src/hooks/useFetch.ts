@@ -33,12 +33,6 @@ const useFetch = <T>({ method = 'GET', url, body, options }: IProps) => {
     }
   })
   
-  // const { data, error } = tsUseFetch<T>(fetchURL, {
-  //   method,
-  //   ...(postBody.current ? { body: JSON.stringify(postBody.current) } : {}),
-  //   ...getHeaderOptions(),
-  //   ...options
-  // });
 
   const doFetch = ({ url, body }: { url: string; body: unknown }) => {
     if (body) {
