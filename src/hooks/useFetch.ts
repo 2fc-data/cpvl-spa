@@ -21,7 +21,7 @@ const useFetch = <T>({ method = 'GET', url, body, options }: IProps) => {
   const postBody = useRef(body);
   
   // eslint-disable-next-line no-empty-pattern
-  const {} = useQuery({
+  const {data, error} = useQuery({
     queryKey: [fetchURL],
     queryFn: async () => {
       return fetch(fetchURL, {
