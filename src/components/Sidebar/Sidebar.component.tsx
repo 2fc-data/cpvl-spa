@@ -1,7 +1,7 @@
 import { MdClose, MdOutlineGroups, MdOutlineHome, MdOutlineSatelliteAlt } from "react-icons/md";
 import { VscSignOut, VscSignIn } from "react-icons/vsc";
 import { SidebarWrap } from "./Sidebar.styles";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setSidebarState } from "../../redux/Slices/SidebarSlice";
 import { RootState, AppDispatch } from "../../redux/Store";
