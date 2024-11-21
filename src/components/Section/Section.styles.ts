@@ -70,20 +70,20 @@ export const SectionWrap = styled.div`
   .section-link {
     align-items: center;
     display: flex;
-    background-color: ${theme.colors.greenComplem};
-    border: 1px solid ${theme.colors.white};
+    background-color: ${theme.colors.white};
+    border: 1px solid ${theme.colors.greenComplem};
     border-radius: 5px;
-    color: ${theme.colors.white};
+    color: ${theme.colors.greenComplem};
     justify-content: center;
     margin-top: 15px;
     padding: 2px 5px ;
     width: 90px;
 
     &:hover {
-      background-color: ${theme.colors.white};
-      border: 1px solid ${theme.colors.greenComplem};
+      background-color: ${theme.colors.greenComplem};
+      border: 1px solid ${theme.colors.white};
       border-radius: 3px;
-      color: ${theme.colors.greenComplem};
+      color: ${theme.colors.white};
       cursor: pointer;
     }
   }
