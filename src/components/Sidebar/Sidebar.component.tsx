@@ -23,6 +23,7 @@ interface IProps {
 
 export const Sidebar = ({ onLogout, onNav, allowedRoutes }: IProps) => {
   const dispatch: AppDispatch = useDispatch();
+
   const isSidebarOpen = useSelector((state: RootState) => state.sidebar.isSidebarOpen);
   const isPrivateMenuOpen = useSelector((state: RootState) => state.privateMenu.isPrivateMenuOpen);
   const publicMenu = ["home", "about", "direction", "login"];

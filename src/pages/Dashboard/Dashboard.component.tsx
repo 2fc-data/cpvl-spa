@@ -5,7 +5,6 @@ import { API, getURI } from '../../services';
 import { IAllowedRoutes } from '../../components/Sidebar';
 import { useFetch } from '../../hooks';
 import { Outlet, useNavigate } from 'react-router-dom';
-
 import { DashboardWrap } from './Dashboard.styles';
 
 export const Dashboard = () => {
